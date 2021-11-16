@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>type-transform</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script defer src="js/main.js"></script>
+  <script src="js/localStorage.js"></script>
+</head>
+<body>
+    <main>
+      <section>
+        <div class="container flex">
+          <h1 class="title main-title">СТУДЕНТИКИ!</h1>
+          <div class="add">
+            <div role="form" aria-label="Форма" class="form-container">
+
+              <form action="" class="add__form form">
+                <label class="label addForm-label" for="input-2">
+                  <input class="input addForm-input" type="text" name="surname" id="input-2" placeholder="Фамилия*" autocomplete="off">
+                </label>
+
+                <label class="label addForm-label" for="input-1">
+                  <input class="input addForm-input" type="text" name="name" id="input-1" placeholder="Имя*" autocomplete="off">
+                </label>
+
+                <label class="label addForm-label" for="input-3">
+                  <input class="input addForm-input" type="text" name="middle-name" id="input-3" placeholder="Отчество*" autocomplete="off">
+                </label>
+
+                <label class="label addForm-label" for="input-4">
+                  <input class="input addForm-input" name="dob" id="input-4" type="text" placeholder="День рождения*"
+                  onfocus="(this.type='date')">
+                </label>
+
+                <label class="label addForm-label" for="input-5">
+                  <input class="input addForm-input" type="number" name="educ-started" id="input-5" placeholder="Год начала обучения*" autocomplete="off">
+                </label>
+
+                <label class="label addForm-label" for="input-6">
+                  <input class="input addForm-input" type="text" name="faculty" id="input-6" placeholder="Факультет*" autocomplete="off">
+                </label>
+
+                <button class="form__btn">Добавить</button>
+              </form>
+            </div>
+          </div>
+          <div class="filter">
+            <div role="form" aria-label="Форма" class="form-container form-container_border-radius_none">
+              <form action="" class="add__form form form_flex_start">
+                <label class="label filter-label" for="filter-1">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24">
+                    <path d="M10 18h4v-2h-4v2zM3 6v2h18V6H3zm3 7h12v-2H6v2z"/>
+                  </svg>
+                  <input class="input input-filter" type="text" name="filter-full-name" id="filter-1" placeholder="ФИО*" autocomplete="off">
+                </label>
+
+                <label class="label filter-label" for="filter-4">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24">
+                    <path d="M10 18h4v-2h-4v2zM3 6v2h18V6H3zm3 7h12v-2H6v2z"/>
+                  </svg>
+                  <input class="input input-filter" type="text" name="filter-faculty" id="filter-2" placeholder="Факультет*" autocomplete="off">
+                </label>
+
+                <label class="label filter-label" for="filter-5">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24">
+                    <path d="M10 18h4v-2h-4v2zM3 6v2h18V6H3zm3 7h12v-2H6v2z"/>
+                  </svg>
+                  <input class="input input-filter" type="number" name="filter-ed-start" id="filter-3" placeholder="Год начала обучения*" autocomplete="off">
+                </label>
+
+                <label class="label filter-label" for="filter-6">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24">
+                    <path d="M10 18h4v-2h-4v2zM3 6v2h18V6H3zm3 7h12v-2H6v2z"/>
+                  </svg>
+                  <input class="input input-filter" type="number" name="filter-ed-ending" id="filter-4" placeholder="Год окончания обучения*" autocomplete="off">
+                </label>
+
+                <button class="form__btn btn-filter"><svg width="16" height="16" viewbox="0 0 16 16"  xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M0.666641 15.3044L15.3333 0.000153846L16 0.695801L1.33331 16L0.666641 15.3044Z"  />
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M0.666725 -0.000125032L15.3334 15.3041L14.6667 15.9998L5.76143e-05 0.695522L0.666725 -0.000125032Z"
+                     />
+                </svg>Сбросить фильтры</button>
+              </form>
+            </div>
+          </div>
+          <div class="table">
+            <div class="table__header">
+              <div class="table__sort table__sort--number">№
+              </div>
+              <div class="table__sort" id="fullName">ФИО
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="24" height="24" viewbox="0 0 24 24">
+                  <path d="M3 11H15V13H3M3 18V16H21V18M3 6H9V8H3Z" />
+                </svg>
+              </div>
+              <div class="table__sort" id="faculty">Факультет
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="24" height="24" viewbox="0 0 24 24">
+                  <path d="M3 11H15V13H3M3 18V16H21V18M3 6H9V8H3Z" />
+                </svg>
+              </div>
+              <div class="table__sort" id="age">ДР и возраст
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="24" height="24" viewbox="0 0 24 24">
+                  <path d="M3 11H15V13H3M3 18V16H21V18M3 6H9V8H3Z" />
+                </svg>
+              </div>
+              <div class="table__sort" id="educStart">Годы обучения
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="24" height="24" viewbox="0 0 24 24">
+                  <path d="M3 11H15V13H3M3 18V16H21V18M3 6H9V8H3Z" />
+                </svg>
+              </div>
+            </div>
+            <div class="table__main">
+              <div class="table-row">
+                <div class="table-col row-numb">1</div>
+                <div class="table-col">Иванов Иван Иванович
+                </div>
+                <div class="table-col">ФАИ
+                </div>
+                <div class="table-col">31.12.2000 (20 лет)
+                </div>
+                <div class="table-col">2019-2023 (2 курс)
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+</body>
+</html>

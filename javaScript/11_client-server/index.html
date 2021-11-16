@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <script defer src="js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () =>  {
+      makeNav(page);
+      makeList(page);
+    });
+  </script>
+  <title>client-server</title>
+</head>
+<body>
+  <main>
+    <section>
+      <div class="container flex">
+        <h1 class="title main-title">Каталог статей</h1>
+        <nav class="nav">
+          <div class="btn-group btn-group-prev">
+            <button class="btn btn-prev" id="prev-page">
+              <svg height="48" viewbox="0 0 48 48" width="48" xmlns="http://www.w3.org/2000/svg"><path d="M20 12l-2.83 2.83 9.17 9.17-9.17 9.17 2.83 2.83 12-12z"/></svg>
+            </button>
+            <button class="btn btn-prev" id="first-page">
+              <!DOCTYPE svg  PUBLIC '-//W3C//DTD SVG 1.1//EN'  'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'><svg enable-background="new 0 0 48 48" height="48px"  version="1.1" viewbox="0 0 48 48" width="48px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g><polygon  points="32.739,14.376 25.188,0.033 20.682,0.033 28.607,15.089 28.6,15.092 28.978,15.793 29.664,17.098    29.677,17.091 33.35,23.905 25.523,39.125 25.519,39.123 20.866,47.959 20.881,47.967 25.369,47.967 28.268,42.463 28.287,42.467    37.912,23.967  "/><polygon  points="22.146,14.376 14.595,0.033 10.088,0.033 18.014,15.089 18.006,15.092 18.384,15.793 19.07,17.098    19.083,17.091 22.756,23.905 14.93,39.125 14.925,39.123 10.272,47.959 10.287,47.967 14.775,47.967 17.674,42.463 17.693,42.467    27.318,23.967  "/></g></svg>
+            </button>
+          </div>
+          <ul class="nav__list list-reset">
+            <li></li>
+          </ul>
+          <div class="btn-group">
+            <button class="btn btn-next" id="next-page">
+              <svg height="48" viewbox="0 0 48 48" width="48" xmlns="http://www.w3.org/2000/svg"><path d="M20 12l-2.83 2.83 9.17 9.17-9.17 9.17 2.83 2.83 12-12z"/></svg>
+            </button>
+            <button class="btn btn-next" id="last-page">
+              <!DOCTYPE svg  PUBLIC '-//W3C//DTD SVG 1.1//EN'  'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'><svg enable-background="new 0 0 48 48" height="48px"  version="1.1" viewbox="0 0 48 48" width="48px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g><polygon  points="32.739,14.376 25.188,0.033 20.682,0.033 28.607,15.089 28.6,15.092 28.978,15.793 29.664,17.098    29.677,17.091 33.35,23.905 25.523,39.125 25.519,39.123 20.866,47.959 20.881,47.967 25.369,47.967 28.268,42.463 28.287,42.467    37.912,23.967  "/><polygon fill="#241F20" points="22.146,14.376 14.595,0.033 10.088,0.033 18.014,15.089 18.006,15.092 18.384,15.793 19.07,17.098    19.083,17.091 22.756,23.905 14.93,39.125 14.925,39.123 10.272,47.959 10.287,47.967 14.775,47.967 17.674,42.463 17.693,42.467    27.318,23.967  "/></g></svg>
+            </button>
+          </div>
+        </nav>
+        <div class="articles flex">
+          <ul class="articles__list list-reset">
+          </ul>
+        </div>
+        <nav class="nav">
+          <div class="btn-group btn-group-prev">
+            <button class="btn btn-prev" id="prev-page-bottom">
+              <svg height="48" viewbox="0 0 48 48" width="48" xmlns="http://www.w3.org/2000/svg"><path d="M20 12l-2.83 2.83 9.17 9.17-9.17 9.17 2.83 2.83 12-12z"/></svg>
+            </button>
+            <button class="btn btn-prev" id="first-page-bottom">
+              <!DOCTYPE svg  PUBLIC '-//W3C//DTD SVG 1.1//EN'  'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'><svg enable-background="new 0 0 48 48" height="48px"  version="1.1" viewbox="0 0 48 48" width="48px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g><polygon  points="32.739,14.376 25.188,0.033 20.682,0.033 28.607,15.089 28.6,15.092 28.978,15.793 29.664,17.098    29.677,17.091 33.35,23.905 25.523,39.125 25.519,39.123 20.866,47.959 20.881,47.967 25.369,47.967 28.268,42.463 28.287,42.467    37.912,23.967  "/><polygon  points="22.146,14.376 14.595,0.033 10.088,0.033 18.014,15.089 18.006,15.092 18.384,15.793 19.07,17.098    19.083,17.091 22.756,23.905 14.93,39.125 14.925,39.123 10.272,47.959 10.287,47.967 14.775,47.967 17.674,42.463 17.693,42.467    27.318,23.967  "/></g></svg>
+            </button>
+          </div>
+          <ul class="nav__list list-reset">
+          </ul>
+          <div class="btn-group">
+            <button class="btn btn-next" id="next-page-bottom">
+              <svg height="48" viewbox="0 0 48 48" width="48" xmlns="http://www.w3.org/2000/svg"><path d="M20 12l-2.83 2.83 9.17 9.17-9.17 9.17 2.83 2.83 12-12z"/></svg>
+            </button>
+            <button class="btn btn-next" id="last-page-bottom">
+              <!DOCTYPE svg  PUBLIC '-//W3C//DTD SVG 1.1//EN'  'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'><svg enable-background="new 0 0 48 48" height="48px"  version="1.1" viewbox="0 0 48 48" width="48px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g><polygon  points="32.739,14.376 25.188,0.033 20.682,0.033 28.607,15.089 28.6,15.092 28.978,15.793 29.664,17.098    29.677,17.091 33.35,23.905 25.523,39.125 25.519,39.123 20.866,47.959 20.881,47.967 25.369,47.967 28.268,42.463 28.287,42.467    37.912,23.967  "/><polygon fill="#241F20" points="22.146,14.376 14.595,0.033 10.088,0.033 18.014,15.089 18.006,15.092 18.384,15.793 19.07,17.098    19.083,17.091 22.756,23.905 14.93,39.125 14.925,39.123 10.272,47.959 10.287,47.967 14.775,47.967 17.674,42.463 17.693,42.467    27.318,23.967  "/></g></svg>
+            </button>
+          </div>
+        </nav>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
