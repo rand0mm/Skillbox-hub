@@ -4,11 +4,13 @@ const btn = document.querySelector('.btn');
 const timerValue = document.querySelector('.timer-value');
 const container = document.querySelector('.container');
 const timerFunc = function() {
-  timerValue.textContent--;
-  if (timerValue.textContent <= 1) {
+  if(timerValue.textContent <= 0) {
+    timerValue.textContent--;
+  } else {
     clearInterval(timerFuncInterval);
   }
 }
+let timerFuncInterval;
 
 document.addEventListener('DOMContentLoaded', function () {
   btn.addEventListener('click', function timer() {
