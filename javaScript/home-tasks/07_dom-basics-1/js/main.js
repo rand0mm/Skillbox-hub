@@ -4,17 +4,20 @@ const btn = document.querySelector('.btn');
 const timerValue = document.querySelector('.timer-value');
 const container = document.querySelector('.container');
 const timerFunc = function() {
-  timerValue.textContent--;
-  if (timerValue.textContent <= 1) {
+  if(timerValue.textContent > 0) {
+    timerValue.textContent--;
+  } else {
     clearInterval(timerFuncInterval);
   }
 }
+let timerFuncInterval;
+let timeout;
 
 document.addEventListener('DOMContentLoaded', function () {
   btn.addEventListener('click', function timer() {
-    if (inp.value > 0) {
-      timerValue.textContent = `${inp.value}`;
-      var timerFuncInterval = clearInterval(timerFuncInterval);
+    if (Math.ceil(inp.value) > 0) {
+      timerValue.textContent = `${Math.ceil(inp.value)}`;
+      timerFuncInterval = clearInterval(timerFuncInterval);
       timerFuncInterval = setInterval(timerFunc, 1000);
     }
 
@@ -32,7 +35,7 @@ document.addEventListener('DOMContentLoaded', function () {
   newDiv.append(newH2);
   newInp.addEventListener('input', function() {
     if(timeOut) {
-      var timeOut = clearTimeout(timeOut);
+      timeOut = clearTimeout(timeOut);
       timeOut = setTimeout(function() {
         newH2.textContent = newInp.value;
       }, 300)
