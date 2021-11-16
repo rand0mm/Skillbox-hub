@@ -1,10 +1,11 @@
+// таймер с кнопкой запуска
 const inp = document.querySelector('.inp');
 const btn = document.querySelector('.btn');
 const timerValue = document.querySelector('.timer-value');
 const container = document.querySelector('.container');
 const timerFunc = function() {
   timerValue.textContent--;
-  if (timerValue.textContent == 0) {
+  if (timerValue.textContent <= 1) {
     clearInterval(timerFuncInterval);
   }
 }
@@ -13,12 +14,15 @@ let timeOut;
 
 document.addEventListener('DOMContentLoaded', function () {
   btn.addEventListener('click', function timer() {
-    timerValue.textContent = `${inp.value}`;
+    if (inp.value > 0) {
+      timerValue.textContent = `${inp.value}`;
       timerFuncInterval = clearInterval(timerFuncInterval);
       timerFuncInterval = setInterval(timerFunc, 1000);
+    }
+
   })
 
-
+// Вывод в диве того что в инпуте с задержкой в 0.3с
   const newDiv = document.createElement("div");
   const newH2 = document.createElement("h2");
   const newInp = document.createElement("input");
