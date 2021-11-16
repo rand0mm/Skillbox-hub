@@ -14,12 +14,8 @@ let timeOut;
 document.addEventListener('DOMContentLoaded', function () {
   btn.addEventListener('click', function timer() {
     timerValue.textContent = `${inp.value}`;
-    if (timerFuncInterval) {
       timerFuncInterval = clearInterval(timerFuncInterval);
-      timerFuncInterval = setInterval(timerFunc, 1000); 
-    } else {
       timerFuncInterval = setInterval(timerFunc, 1000);
-    }
   })
 
 
@@ -31,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function () {
   newH2.innerHTML = "Привет!";
   container.append(newDiv);
   container.append(newInp);
-  newDiv.append(newH2);   
+  newDiv.append(newH2);
   newInp.addEventListener('input', function() {
     if(timeOut) {
       timeOut = clearTimeout(timeOut);
@@ -43,7 +39,7 @@ document.addEventListener('DOMContentLoaded', function () {
         newH2.textContent = newInp.value;
       }, 300)
     }
-    
+
   });
 });
 

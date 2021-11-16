@@ -45,3 +45,9 @@
 .h2 {
   font-size: 25px;
 }
+
+.inp::-webkit-outer-spin-button,
+.inp::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
