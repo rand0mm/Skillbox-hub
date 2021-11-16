@@ -4,7 +4,7 @@ const btn = document.querySelector('.btn');
 const timerValue = document.querySelector('.timer-value');
 const container = document.querySelector('.container');
 const timerFunc = function() {
-  if(timerValue.textContent <= 0) {
+  if(timerValue.textContent >= 0) {
     timerValue.textContent--;
   } else {
     clearInterval(timerFuncInterval);
