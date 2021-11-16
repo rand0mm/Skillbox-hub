@@ -9,14 +9,12 @@ const timerFunc = function() {
     clearInterval(timerFuncInterval);
   }
 }
-let timerFuncInterval;
-let timeOut;
 
 document.addEventListener('DOMContentLoaded', function () {
   btn.addEventListener('click', function timer() {
     if (inp.value > 0) {
       timerValue.textContent = `${inp.value}`;
-      timerFuncInterval = clearInterval(timerFuncInterval);
+      var timerFuncInterval = clearInterval(timerFuncInterval);
       timerFuncInterval = setInterval(timerFunc, 1000);
     }
 
@@ -34,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function () {
   newDiv.append(newH2);
   newInp.addEventListener('input', function() {
     if(timeOut) {
-      timeOut = clearTimeout(timeOut);
+      var timeOut = clearTimeout(timeOut);
       timeOut = setTimeout(function() {
         newH2.textContent = newInp.value;
       }, 300)
