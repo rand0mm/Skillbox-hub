@@ -13,14 +13,16 @@ const timerFunc = function() {
 let timerFuncInterval;
 let timeOut;
 
-btn.addEventListener('click', function timer() {
+
+function timer() {
   if (Math.ceil(inp.value) > 0) {
     timerValue.textContent = `${Math.ceil(inp.value)}`;
     timerFuncInterval = clearInterval(timerFuncInterval);
     timerFuncInterval = setInterval(timerFunc, 1000);
   }
+}
 
-})
+btn.addEventListener('click', timer)
 
 // Вывод в диве того что в инпуте с задержкой в 0.3с
 const newDiv = document.createElement("div");
