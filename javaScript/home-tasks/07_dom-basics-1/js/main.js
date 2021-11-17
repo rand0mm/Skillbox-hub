@@ -4,7 +4,15 @@ const btn = document.querySelector('.btn');
 const timerValue = document.querySelector('.timer-value');
 const container = document.querySelector('.container');
 const timerFunc = function() {
+<<<<<<< HEAD
+<<<<<<< HEAD
   if(timerValue.textContent > 0) {
+=======
+  if(timerValue.textContent >= 0) {
+>>>>>>> 5f77498 (fix)
+=======
+  if(timerValue.textContent > 0) {
+>>>>>>> 9938f46 (fix)
     timerValue.textContent--;
   } else {
     clearInterval(timerFuncInterval);
@@ -15,8 +23,18 @@ let timeout;
 
 document.addEventListener('DOMContentLoaded', function () {
   btn.addEventListener('click', function timer() {
+<<<<<<< HEAD
+<<<<<<< HEAD
     if (Math.ceil(inp.value) > 0) {
       timerValue.textContent = `${Math.ceil(inp.value)}`;
+=======
+    if (inp.value > 0) {
+      timerValue.textContent = `${inp.value}`;
+>>>>>>> 6fa7f97 (fix)
+=======
+    if (Math.ceil(inp.value) > 0) {
+      timerValue.textContent = `${Math.ceil(inp.value)}`;
+>>>>>>> 509f2b5 (fix)
       timerFuncInterval = clearInterval(timerFuncInterval);
       timerFuncInterval = setInterval(timerFunc, 1000);
     }
