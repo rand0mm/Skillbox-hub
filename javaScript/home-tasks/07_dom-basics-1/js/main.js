@@ -41,7 +41,7 @@ newDiv.append(newH2);
 
 newInp.addEventListener('input', function() {
 
-  if(timeOut) timeOut = clearTimeout(timeOut);
+  timeOut = clearTimeout(timeOut);
 
   timeOut = setTimeout(delay, 300)
 
