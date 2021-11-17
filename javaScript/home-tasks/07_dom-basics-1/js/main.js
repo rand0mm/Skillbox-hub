@@ -15,8 +15,8 @@ let timeout;
 
 document.addEventListener('DOMContentLoaded', function () {
   btn.addEventListener('click', function timer() {
-    if (inp.value > 0) {
-      timerValue.textContent = `${inp.value}`;
+    if (Math.ceil(inp.value) > 0) {
+      timerValue.textContent = `${Math.ceil(inp.value)}`;
       timerFuncInterval = clearInterval(timerFuncInterval);
       timerFuncInterval = setInterval(timerFunc, 1000);
     }
