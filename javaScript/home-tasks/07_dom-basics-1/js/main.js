@@ -3,12 +3,15 @@ const inp = document.querySelector('.inp');
 const btn = document.querySelector('.btn');
 const timerValue = document.querySelector('.timer-value');
 const container = document.querySelector('.container');
-const timerFunc = function() {
+const timerFunc = () => {
   if(timerValue.textContent > 0) {
     timerValue.textContent--;
   } else {
     clearInterval(timerFuncInterval);
   }
+}
+const delay = () => {
+  newH2.textContent = newInp.value;
 }
 let timerFuncInterval;
 let timeOut;
@@ -40,9 +43,7 @@ newInp.addEventListener('input', function() {
 
   if(timeOut) timeOut = clearTimeout(timeOut);
 
-  timeOut = setTimeout(function() {
-    newH2.textContent = newInp.value;
-  }, 300)
+  timeOut = setTimeout(delay, 300)
 
 });
 
