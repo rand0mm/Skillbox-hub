@@ -4,7 +4,8 @@ document.addEventListener('DOMContentLoaded', function() {
   let timerValue = document.querySelector('.timer');
   let timerInterval;
   function paintNumber() {
-    timerValue.textContent = inputValue.value;
+    if (inputValue.value > 0) {
+      timerValue.textContent = 'inputValue.value';}
   };
 
   inputValue.addEventListener('input', paintNumber);
@@ -18,9 +19,8 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   }
 
-
   button.addEventListener('click', function() {
-    timerValue.textContent = inputValue.value;
+    paintNumber()
     clearInterval(timerInterval);
     timerInterval = setInterval(timer, 1000);
   });

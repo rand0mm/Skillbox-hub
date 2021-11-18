@@ -10,10 +10,11 @@ document.addEventListener('DOMContentLoaded', function() {
   input.classList.add('input');
   header.classList.add('header');
 
+  function text() {
+    header.textContent = input.value
+  }
   function delay() {
-    setTimeout(function() {
-      header.textContent = input.value
-    }, 2000)
+    setTimeout(text, 2000)
   }
 
   input.addEventListener('input', function(){
