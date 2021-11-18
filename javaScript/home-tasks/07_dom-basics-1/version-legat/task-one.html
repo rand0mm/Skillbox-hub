@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>1 задание</title>
+  <script defer src="task-one.js"></script>
+  <style>
+    .container {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      margin: auto;
+      padding: 20px;
+      width: 300px;
+      height: 300px;
+      background-color: #999;
+      box-sizing: border-box;
+    }
+
+    .input {
+      padding: 5px 10px;
+      border: 3px solid #333;
+      border-radius: 10px;
+      width: 200px;
+      font-size: 20px;
+      text-align:center;
+    }
+
+    .button {
+      padding: 10px 20px;
+      border: 1px solid transparent;
+      border-radius: 10px;
+      font-size: 24px;
+      color: #fff;
+      background-color: blue;
+    }
+
+    .timer {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 30px;
+      width: 230px;
+      height: 150px;
+      font-size: 40px;
+      color: #fff;
+      background-color: #333;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="timer">0</div>
+    <input class="input" type="number" value="">
+    <button class="button">Старт</button>
+  </div>
+</body>
+</html>
