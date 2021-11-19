@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- <script defer src="script.js"></script> -->
+</head>
+<body>
+    <div class="block"></div>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script> -->
+    <script>
+        const block = document.querySelector('.block');
+        const start = Date.now(); //Запомнить время начала
+
+        const interval = setInterval(function() {
+            //Сколько времени прошло с ачала анимации?
+            const timePassed = Date.now() - start;
+
+            if (timePassed >= 2000) {
+                clearInterval(interval); // закончить анимацию через 2 секунды
+                return;
+            }
+
+            //отрисовать анимацию на момент timePassed, прошедший с начала анимации
+            draw(timePassed);
+        }, 16)
+
+        // в то время как timePassed идёт от 0 до 2000
+        // left изменяет значен ие от 0px до 400px
+        function draw(timePassed) {
+            block.style.transform = `translateX(${timePassed / 5}px)`;
+        }
+
+       
+    </script>
+</body>
+</html>

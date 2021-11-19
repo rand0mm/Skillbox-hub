@@ -1,0 +1,34 @@
+<!-- просто прямоугольник, который мы будем таскать мышкой -->
+<div id="drag-me" style="position: absolute;top: 0;left: 0; padding: 10px; background: grey; text-align: center;">
+    перетащи меня
+</div>
+<script>
+    // не будет фокусироваться на реализации
+    (() => {
+        const dragDiv = document.getElementById('drag-me');
+        console.log(dragDiv)
+        let x, y, left, top;
+
+        function onMove(event) {
+            event.preventDefault();
+            dragDiv.style.left = event.clientX - x + left;
+            dragDiv.style.top = event.clientY- y + top;
+        }
+
+        // жмем на прямоугольник (mousedown, нажатие кнопки мыши)
+        dragDiv.addEventListener('mousedown', event => {
+            x = event.clientX;
+            y = event.clientY;
+            left = parseInt(dragDiv.style.left)
+            top = parseInt(dragDiv.style.top)
+            // добавляем обработчик движения мыши по экрану
+            window.addEventListener('mousemove', onMove);
+        });
+        // отпускаем мышку (mouseup, отжатие кнопки мыши)...
+        document.addEventListener('mouseup', () => {
+            //...а когда происходит отпускание кнопки, убираем обработчик omMove,
+            // чтобы перестать перемещать элемент
+            window.removeEventListener('mousemove', onMove);
+        });
+    })();
+</script>

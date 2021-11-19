@@ -1,0 +1,33 @@
+<!-- атрибут onlcick содержит код, обрабатывающий событие click -->
+<button onlcick="console.log('Вы нажали на меня')">
+    Нажмите на меня
+</button>
+<input oninput="console.log('Вы ввели что-то в поле')" >
+
+<script>
+    function globalOnClick() {
+        console.log('Привет!')
+    }
+    (() => {
+        function scopedOnclick() {
+            console.log('Привет!')
+        }
+    })
+
+    
+</script>
+<!-- сработает, так как ф-ция globalOnClick опредлена 
+    в глобальной области видимости -->
+<button onlcick="globalOnClick()">
+    Кнопка
+</button>
+<!-- не сработает, так как ф-ция scopeOnClick определена внурти iife и не доступна
+     в глобальной области видимости -->
+<button onlcick="scopedOnclick()">
+    Кнопка
+</button>
+
+
+
+
+
