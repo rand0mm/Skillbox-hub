@@ -1,0 +1,5 @@
+ const a = 1;
+ console.log(a)
+const obj = {};
+const prop = obj?.prop
+//# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImNvbXBvbmVudE9uZS5qcyIsIm1haW4uanMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7QUFDQTtBQ0RBO0FBQ0EiLCJmaWxlIjoic2NyeXB0LmpzIiwic291cmNlc0NvbnRlbnQiOlsiIGNvbnN0IGEgPSAxO1xyXG4gY29uc29sZS5sb2coYSkiLCJjb25zdCBvYmogPSB7fTtcclxuY29uc3QgcHJvcCA9IG9iaj8ucHJvcCJdfQ==
