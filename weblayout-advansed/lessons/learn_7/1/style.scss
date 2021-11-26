@@ -1,0 +1,48 @@
+$colorBackground: cyan;
+
+@mixin maceContainer {
+    padding: 10px 25px;
+    margin: 0 auto;
+    background-color: salmon;
+}
+
+@mixin ghost {
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: rgba(#af3af3, 0.3);
+         pointer-events: none; //Что бы можно было сквозь выделять
+    }
+
+}
+
+body {
+    background-color: $colorBackground;
+
+    h1 {
+        position: relative;
+        color: darcken($colorBackground, 5%);
+        @include ghost()
+    }
+}
+
+.block {
+    &__elem {
+        color: $colorBackground;
+    
+    }
+}
+
+.container {
+    max-width: 1170px;
+    @include maceContainer()
+}
+
+.container-fluid {
+    @include maceContainer()
+
+}

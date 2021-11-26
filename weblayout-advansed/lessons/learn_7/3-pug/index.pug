@@ -1,0 +1,20 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Document
+    link(rel="stylesheet", href="../css/style.css")
+  body
+    - var products = [{title: 'iphone 12 Pro Max 256gb', price: '129 000 р'},{title: 'iphone 12 Pro Max 256gb', price: '129 000 р'},{title: 'iphone 12 Pro Max 256gb', price: '129 000 р'},{title: 'iphone 12 Pro Max 256gb', price: '129 000 р'},{title: 'Энергетический напиток редбул', price: '129 000 р'}]
+    .container
+      ul.grid
+       each product in productsы
+        li.grid__item
+          article.card
+            a.card__image(hred='#')
+              img(src="../img/1.jpg", alt="Нет изображения товара")
+            h3.card__title
+              a(href='')= product.title
+            span.card__prise= product.price

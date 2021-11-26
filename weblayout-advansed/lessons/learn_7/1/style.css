@@ -1,0 +1,37 @@
+body {
+  background-color: cyan;
+}
+
+body h1 {
+  position: relative;
+  color: darcken(cyan, 5%);
+}
+
+body h1:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(175, 58, 243, 0.3);
+  pointer-events: none;
+}
+
+.block__elem {
+  color: cyan;
+}
+
+.container {
+  max-width: 1170px;
+  padding: 10px 25px;
+  margin: 0 auto;
+  background-color: salmon;
+}
+
+.container-fluid {
+  padding: 10px 25px;
+  margin: 0 auto;
+  background-color: salmon;
+}
+/*# sourceMappingURL=style.css.map */
