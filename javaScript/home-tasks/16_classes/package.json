@@ -1,0 +1,21 @@
+{
+  "private": true,
+  "scripts": {
+    "lint": "eslint ./",
+    "lint:report": "eslint ./",
+    "start": "npm i && node ./classes/server/index.js"
+  },
+  "devDependencies": {
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-formatter-gitlab": "^2.1.0",
+    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^5.2.0"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "faker": "^5.5.3"
+  }
+}
