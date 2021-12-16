@@ -1,0 +1,250 @@
+@import '_mixin.scss';
+
+@font-face {
+	font-family: 'roboto';
+  font-display: swap;
+  font-style: normal;
+  font-weight: 400;
+	src: local('roboto-regular'),
+		url('../fonts/roboto-regular.woff2') format('woff2'),
+		url('../fonts/roboto-regular.woff') format('woff');
+}
+@font-face {
+	font-family: 'roboto';
+  font-display: swap;
+  font-style: normal;
+  font-weight: 700;
+	src: local('roboto-bold'),
+		url('../fonts/roboto-bold.woff2') format('woff2'),
+		url('../fonts/roboto-bold.woff2') format('woff');
+}
+@font-face {
+	font-family: 'TTFirsNeue';
+  font-display: swap;
+  font-style: normal;
+  font-weight: 700;
+	src: local('TTFirsNeue-bold'),
+		url('../fonts/TTFirsNeue-bold.woff2') format('woff2'),
+		url('../fonts/TTFirsNeue-bold.woff') format('woff');
+}
+@font-face {
+	font-family: 'TTFirsNeue';
+  font-display: swap;
+  font-style: normal;
+  font-weight: 500;
+	src: local('TTFirsNeue-medium'),
+		url('../fonts/TTFirsNeue-medium.woff2') format('woff2'),
+		url('../fonts/TTFirsNeue-medium.woff') format('woff');
+}
+@font-face {
+	font-family: 'TTFirsNeue';
+  font-display: swap;
+  font-style: normal;
+  font-weight: 400;
+	src: local('TTFirsNeue-Regular'),
+		url('../fonts/TTFirsNeue-Regular.woff2') format('woff2'),
+		url('../fonts/TTFirsNeue-Regular.woff') format('woff');
+}
+
+:root {
+  // отступы
+  --containerPadding: 21px;
+  // контейнер
+  --containerMaxidth: 1920px;
+  // шрифты
+  --textSmall:12px;
+  --textRegular:14px;
+  --textMedium:16px;
+  --textTitle:18px;
+  --textBigTitle:24px;
+  // цвет
+  --colorBackground: #202020;
+  --colorBackgroundGray: #4a4a4a;
+  --colorWhite: #fff;
+  --colorOrange: #FF6E30;
+  --colorTextDark: #202020;
+  --colorTextGrey:#CACACA;
+  --colorTextGreyLight:#999999;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  list-style: none;
+  text-decoration: none;
+}
+h1 {
+  margin: 0;
+}
+html body {
+  font-family: 'roboto', 'TTFirsNeue', sans-serif;
+}
+
+body .active {
+  display: block;
+}
+
+body .deactivate {
+  display: none;
+}
+
+img {
+  width: 100%;
+}
+
+.sprite {
+  display: none;
+}
+
+.main-container {
+  max-width: 1352px;
+  margin: 0 auto;
+  padding-right: 21px;
+  padding-left: 21px;
+}
+.title,
+.second-title {
+  font-family: 'TTFirsNeue', 'roboto', sans-serif;
+  font-size: 18px;
+  color:#202020;
+}
+
+.btn {
+  margin-right: auto;
+  padding: 8.5px 18.5px;
+  border: 3px solid transparent;
+  font-weight: 700;
+  font-size: 14px;
+  color: var(--colorWhite);
+  outline: none;
+  background-color: transparent;
+  cursor: pointer;
+  @include transition;
+}
+.btn_orange {
+  background-color: var(--colorOrange);
+}
+.btn_orange:hover {
+  border-color: #BC572B;
+  background-color: #FF6E30;
+}
+.btn_orange:focus {
+  border-color: #CE4307;
+  background-color: #BC572B;
+}
+.btn_orange:active {
+  border-color: #CE4307;
+  background-color: #CE4307;
+}
+.btn_transparent {
+  border-color: var(--colorOrange);
+}
+.btn_transparent:hover {
+  background-color: var(--colorOrange);
+}
+.btn_transparent:focus {
+  background-color: #BC572B;
+}
+.btn_transparent:active {
+  border-color: #CE4307;
+  background-color: #CE4307;
+}
+.icon-class {
+  position: absolute;
+  top: 6px;
+  right: 5px;
+  padding: 3px 7px;
+  font-size: 12px;
+  color: var(--colorWhite);
+  background-color: #333;
+}
+.link-svg,
+.link-svg path{
+  @include transition;
+}
+.link-svg:hover path{
+  fill: var(--colorOrange);
+}
+.link-svg:focus path{
+  fill: #BC572B;
+}
+.link-svg:active path{
+  fill: #CE4307;
+}
+.tel {
+  font-family: 'TTFirsNeue', 'roboto', sans-serif;
+  font-weight: 400;
+  color: var(--colorOrange);
+}
+.tel,
+.tel svg path {
+  @include transition;
+}
+.tel:hover,
+.tel:hover svg path {
+  color: var(--colorOrange);
+  fill: var(--colorOrange);
+
+}
+.tel:focus,
+.tel:focus svg path {
+  color: var(--colorWhite);
+  background-color: var(--colorOrange);
+  fill: var(--colorWhite);
+
+}
+.tel:active,
+.tel:active svg path {
+  color: #CE4307;
+  background-color: var(--colorWhite);
+  fill: #CE4307;
+}
+.opacity {
+  opacity: 1;
+}
+
+
+/* map */
+
+.map {
+  min-width: 100%;
+  min-height: 100%;
+}
+
+[class*="ground-pane"] {
+  filter: grayscale(1);
+}
+
+@media (min-width: 600px) {
+  .main-container {
+    padding-right: 27px;
+    padding-left: 27px;
+  }
+  .btn {
+    padding: 13px 17px;
+    font-size: 16px;
+  }
+  .icon-class {
+    top: 15px;
+    right: 15px;
+    padding: 6px 15px;
+    font-size: 14px;
+  }
+  .title,
+  .second-title {
+    font-size: 24px;
+  }
+  .tel {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 769px) {
+  .main-container {
+    padding-right: 31px;
+    padding-left: 30px;
+  }
+}
+
+

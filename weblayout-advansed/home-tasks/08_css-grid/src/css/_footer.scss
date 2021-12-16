@@ -1,0 +1,137 @@
+@import '_mixin.scss';
+
+.footer {
+  padding: 31px 0 0px;
+  background-color: var(--colorBackground);
+  &__flex {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__logo-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 0 13px;
+    width: 100%;
+    background-color: var(--colorBackgroundGray);
+  }
+  &__logo {
+    margin-bottom: 8px;
+    width: 112px;
+    height: 18px;
+  }
+  &__logo-info {
+    font-family: 'TTFirsNeue', 'roboto', sans-serif;
+    font-size: 10px;
+    color: var(--colorWhite);
+  }
+  &__quote {
+    display: none;
+  }
+  &__links-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 27px;
+  }
+  &__links-title {
+    margin-bottom: 12px;
+    font-weight: normal;
+    font-size: 16px;
+    color: var(--colorTextGrey);
+  }
+  &__list {
+    display: flex;
+    justify-content: center;
+  }
+  &__item:not(:last-child) {
+    margin-right: 21px;
+  }
+  &__svg {
+    width: 30px;
+    height: 30px;
+  }
+  &__link:focus .link-svg path{
+    fill: #BC572B;
+  }
+}
+
+@media (min-width: 600px) {
+  .footer {
+    padding: 23px 27px 13px;
+    &__flex {
+      flex-direction: row;
+      align-items: flex-start;
+    }
+    &__logo-box {
+      flex-direction: column;
+      align-items: flex-start;
+      margin-top: 6px;
+      padding: 0;
+      background-color: transparent;
+    }
+    &__logo {
+      margin-bottom: 6px;
+      width: 166px;
+      height: 27px;
+    }
+    &__logo-info {
+      font-size: 14px;
+    }
+    &__links-box {
+      align-items: center;
+      margin-bottom: 0px;
+      min-width: 161px;
+    }
+    &__links-title {
+      margin-bottom: 12px;
+      font-weight: normal;
+      font-size: 16px;
+      color: var(--colorTextGrey);
+    }
+    &__list {
+      display: flex;
+      justify-content: center;
+    }
+    &__item:not(:last-child) {
+      margin-right: 21px;
+    }
+    &__svg {
+      width: 30px;
+      height: 30px;
+    }
+  }
+}
+
+@media (min-width: 910px) {
+  .footer {
+    padding-right: 30px;
+    padding-left: 30px;
+    &__quote {
+      display: block;
+      margin-right: 7.2%;
+      min-width: 361px;
+      line-height: 137%;
+      color: #CACACA;
+      quotes: none;
+    }
+    &__quote-author {
+      color: #666;
+    }
+  }
+}
+
+@media (min-width: 1360px) {
+  .footer {
+    &__logo {
+      width: 190px;
+      height: 30px;
+    }
+    &__quote {
+      margin-right: 25.5%;
+    }
+  }
+}

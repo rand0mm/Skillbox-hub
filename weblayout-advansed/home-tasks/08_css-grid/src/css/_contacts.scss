@@ -1,0 +1,254 @@
+@import '_mixin.scss';
+
+.contacts {
+  &__title {
+    margin-bottom: 14px;
+    padding: 0 20px;
+  }
+  &__map {
+    position: relative;
+    min-height: 472px;
+  }
+}
+
+.contacts .main-container {
+  padding: 0;
+}
+
+.location {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 26px 34px 14px 19px;
+  background-color: var(--colorBackground);
+  opacity: 0.85;
+  &__title {
+    margin-bottom: 10px;
+    font-weight: 400;
+    color: var(--colorWhite);
+  }
+  &__address {
+    font-style: normal;
+    font-size: 14px;
+    line-height: 18px;
+    color: var(--colorTextGrey);
+  }
+
+  &__tel {
+    display: block;
+    margin-top: 11px;
+  }
+
+  &__tel-svg {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+  }
+  &__btn-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    border-color: transparent;
+    background-color: transparent;
+  }
+  &__btn-svg {
+    width: 20px;
+    height: 20px;
+    opacity: 1;
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 25px 21px 48px;
+  &__title {
+    margin-bottom: 10px;
+    font-weight: 500;
+    font-size: 18px;
+    color: var(--colorTextDark);
+  }
+  &__text {
+    margin-bottom: 15px;
+    font-size: 14px;
+    line-height: 18px;
+    color: var(--colorTextGreyLight);
+  }
+  &__label {
+    position: relative;
+  }
+  &__input,
+  &__textarea {
+    margin-bottom: 20px;
+    padding: 10px 22px;
+    width: 100%;
+    border-color: transparent;
+    font-size: 14px;
+    color: var(--colorTextDark);
+    background-color: #E9E9E9;
+  }
+  &__textarea {
+    min-height: 148px;
+    resize: none;
+  }
+  &__label .js-validate-error-label {
+    top: -17px;
+    left: 10px;
+    font-size: 9px;
+    font-weight: 400;
+    color: var(--colorOrange);
+    border-color: #FF3030 !important;
+    background-color: transparent;
+  }
+}
+
+@media (min-width: 600px) {
+  .contacts {
+    padding-bottom: 67px;
+    &__title {
+      margin-bottom: 14px;
+      padding: 0;
+    }
+    &__map {
+      min-height: 472px;
+    }
+  }
+  .contacts .main-container {
+    padding: 14px 27px 0px ;
+  }
+  .location {
+    padding: 20px 34px 19px 30px;
+    &__title {
+      margin-bottom: 0px;
+    }
+    &__address {
+      max-width: 436px;
+      font-size: 16px;
+      line-height: 28px;
+    }
+    &__tel {
+      margin-top: 3px;
+    }
+  }
+  .form {
+    padding: 20px 0px 0px;
+    max-width: 465px;
+    &__title {
+      margin-bottom: 2px;
+      font-size: 24px;
+    }
+    &__text {
+      margin-bottom: 14px;
+      font-size: 16px;
+      line-height: 22px;
+    }
+    &__input,
+    &__textarea {
+      margin-bottom: 20px;
+      padding: 14px 21px;
+      font-size: 16px;
+      border-color: transparent;
+      background-color: #E9E9E9;
+    }
+    &__label-textarea {
+      margin-bottom: 21px;
+      min-height: 148px;
+    }
+    &__textarea {
+      min-height: 148px;
+    }
+  }
+}
+
+@media (min-width: 769px) {
+  .contacts {
+    padding-bottom: 67px;
+    &__box {
+      display: flex;
+      justify-content: space-between;
+    }
+    &__map {
+      margin-right: 30px;
+      width: 61.5%;
+      height: 469px;
+    }
+  }
+  .contacts .main-container {
+    padding-right: 32px;
+    padding-left: 30px;
+  }
+  .location {
+    padding-bottom: 20px;
+    &__address {
+      max-width: 293px;
+    }
+    &__tel {
+      display: inline;
+      margin-top: 11px;
+    }
+    &__tel-svg {
+      width: 16.5px;
+      height: 16.5px;
+    }
+  }
+  .form {
+    padding: 0;
+    width: auto;
+  }
+}
+@media (min-width: 1360px) {
+  .contacts {
+    padding-bottom: 58px;
+    &__title {
+      margin-bottom: 20px;
+    }
+    &__map {
+      width: 850px;
+    }
+  }
+
+  .location {
+    top: 0;
+    right: auto;
+    justify-content: space-between;
+    padding: 0 0 0 63px;
+    min-width: 412px;
+    &__title {
+      margin-top: auto;
+    }
+    &__address {
+      max-width: 300px;
+    }
+
+    &__tel {
+      display: block;
+      margin-top: 0;
+      margin-bottom: 53%;
+      color: var(--colorWhite);
+    }
+    &__tel-svg path {
+      fill: var(--colorWhite);
+    }
+  }
+  .form {
+    max-width: 410px;
+    &__title {
+      margin-top: -12px;
+    }
+    &__text {
+      margin-bottom: 12px;
+    }
+    &__label-textarea {
+      margin-bottom: 20px;
+    }
+    &__btn {
+      margin-bottom: 10px;
+    }
+  }
+}

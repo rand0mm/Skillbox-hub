@@ -1,0 +1,11 @@
+@mixin clearListStyles {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin transition {
+  transition-property: margin, border, color, background-color, transform, fill;
+  transition-duration: 0.3s;
+  transition-timing-function: ease;
+}
