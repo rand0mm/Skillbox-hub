@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <title>Игра "Пары"</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script defer src="js/scrypt.js"></script>
+  <script defer src="js/main.js"></script>
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="header__box">
+        <button class="timer-btn">
+          Пауза
+        </button>
+        <div class="timer">
+          00.00
+        </div>
+        <button class="btn">
+          Новая Игра
+        </button>
+        <div class="header__info">
+          Сложность: Высокая
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="main">
+    <div class="container">
+      <div class="game-box">
+        <div class="card">
+          8
+        </div>
+        <div class="card">
+          8
+        </div>
+        <div class="card">
+          8
+        </div>
+        <div class="card">
+          8
+        </div>
+        <div class="card">
+          8
+        </div>
+        <div class="card">
+          8
+        </div>
+        <div class="card">
+          8
+        </div>
+        <div class="card">
+          8
+        </div>
+
+      </div>
+      <form action="#" class="form">
+        <label class="label" for="input">
+          Введите желаемое количество карточек по вертикали/горизонтали
+          <input id="input" class="input" type="text" placeholder="От 2 до 10">
+        </label>
+        <button class="form-btn">Начать</button>
+      </form>
+      <div class="game-over">
+        <p class="game-over__text">
+          ИГРА ОКОНЧЕНА
+        </p>
+        <button class="game-over__btn">
+          Сыграть ещё раз?
+        </button>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
