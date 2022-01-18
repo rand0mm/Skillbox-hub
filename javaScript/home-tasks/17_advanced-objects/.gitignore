@@ -1,0 +1,7 @@
+.idea
+.DS_store
+node_modules
+
+lessons/18_npm/01_npm/node_modules
+
+/dist
