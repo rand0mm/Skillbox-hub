@@ -1,0 +1,201 @@
+:root {
+  --amethyst-color: #9D5CD0;
+  --royal-purple-color: #7943A4;
+  --heliotrope-color: #C283F3;
+  --amethyst-active-color: #D1A9F0;
+  --black-color: #000;
+  --white-color: #fff;
+  --text-color:#333333;
+  --grey-color: #999999;
+  --time-anim: .3s ease;
+}
+
+@media (min-width: 591px) {
+
+  /* hover-none */
+
+  .tooltip-icon:hover svg path {
+    fill: var(--amethyst-active-color);
+    stroke: var(--amethyst-color);
+  }
+
+  .tooltip-icon:hover svg > path + path {
+    fill: var(--black-color);
+    stroke: transparent;
+  }
+
+  .logo:hover {
+    opacity: 0.8;
+  }
+
+  .nav__link:hover {
+    color: var(--heliotrope-color);
+  }
+
+  .login:hover {
+    color: var(--heliotrope-color);
+  }
+
+  .drop-btn:hover {
+    color: var(--amethyst-color);
+  }
+
+  .drop-down__link:hover {
+    outline: 2px solid var(--amethyst-color);
+  }
+
+  .search-form__input:hover{
+    border-color: var(--royal-purple-color);
+  }
+
+  .hero__link:hover::before {
+    top: -3px;
+    right: -3px;
+    bottom: -3px;
+    left: -3px;
+    border-color: var(--amethyst-active-color);
+    opacity: 1;
+  }
+
+  .choices__inner:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+
+  .gallery__descr-link:hover {
+    color: var(--amethyst-color);
+  }
+
+  .accordion-empty__link:hover {
+    color: var(--amethyst-color);
+  }
+
+  .gallery__slide:hover .gallery-content__link::before {
+    opacity: 1;
+  }
+
+  .swiper-button-next:hover svg > path {
+    fill: var(--amethyst-color);
+  }
+
+  .swiper-button-prev:hover svg > path  {
+    fill: var(--amethyst-color);
+  }
+
+  .proj__slider-btn-prev:hover {
+    border: none;
+  }
+
+  .proj__slider-btn-next:hover {
+    border: none;
+  }
+
+  .proj__slider-btn-prev:hover svg > path {
+    fill: var(--amethyst-active-color);
+  }
+
+  .proj__slider-btn-next:hover svg > path  {
+    fill: var(--amethyst-active-color);
+  }
+
+  .tabs__btn:hover {
+    filter: drop-shadow(0px 0px 20px rgba(157, 92, 208, 0.7));
+  }
+
+  .ui-state-hover .ui-icon, .ui-state-focus .ui-icon, .ui-button:hover .ui-icon, .ui-button:focus-visible .ui-icon {
+    background-image: url(../img/accordion-icon-hover.png);
+    background-position: center center;
+  }
+
+  .ui-accordion-header:hover {
+    color: var(--amethyst-color);
+  }
+
+  .ui-accordion-header:hover,
+  .ui-accordion-header:hover + .ui-accordion-content +.ui-accordion-header {
+    border-color: var(--amethyst-color);
+  }
+
+
+  .ui-accordion-header-active:hover .ui-icon {
+    background-image: url(../img/accordion-icon-hover.png);
+    transform: translateY(-50%) rotate(180deg);
+  }
+
+  .painter-list__tab:hover {
+    color: var(--amethyst-color);
+  }
+
+  .painter-list__tab:hover::after {
+    opacity: 1;
+    top: 0;
+    bottom: -3px;
+    right: 0;
+    left: 0;
+    background-color: transparent;
+    border-bottom: 1px solid var(--amethyst-color);
+  }
+
+  .event-card__link:hover {
+    color: var(--royal-purple-color);
+  }
+
+  .proj__link:hover {
+    color: var(--royal-purple-color);
+  }
+
+  .proj__link:hover::after {
+    opacity: 1;
+  }
+
+  .event__btn:hover::after {
+    background-color: var(--amethyst-color);
+  }
+
+  .event__btn:hover {
+    color: var(--white-color);
+  }
+
+  .callback__form-btn:hover::after {
+    background-color: var(--amethyst-color);
+  }
+
+  .callback__form-btn:hover {
+    color: var(--white-color);
+  }
+
+  .edit-card__btn:hover::after {
+    background-color: var(--amethyst-color);
+  }
+
+  .edit-card__btn:hover {
+    color: var(--white-color);
+  }
+
+  .ui-accordion-header:hover .accordion__caption-icon svg path {
+    fill: var(--amethyst-active-color);
+  }
+
+  .filter-interval__input:hover {
+    outline: none;
+    background-color: var(--amethyst-color);
+  }
+
+  .proj__slider-link:hover .proj__slider-link-pict  {
+    filter: grayscale(0);
+    opacity: 1;
+  }
+
+  .social-list__link:hover svg path {
+    fill: var(--white-color);
+  }
+
+  .social-list__link svg path {
+    transition: fill .3s ease;
+  }
+
+  .contacts__link:hover {
+    opacity: 0.5;
+  }
+
+}
+
