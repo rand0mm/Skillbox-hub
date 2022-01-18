@@ -8,6 +8,7 @@ import Swiper, {
 } from 'swiper';
 import SimpleBar from 'simplebar';
 import Choices from 'choices.js';
+import ymaps from 'ymaps';
 import heroSwiper from './js/swiper';
 import sendmail from './js/sendmail';
 import tabs from './js/tabs';
@@ -411,21 +412,21 @@ tippy('#tooltip-3', {
 });
 $('#menu').on('click', 'a', (event) => {
   event.preventDefault();
-  const id = $(this).attr('href');
+  const id = $(event.target).attr('href');
   const { top } = $(id).offset();
   $('body,html').animate({ scrollTop: top }, 1000);
 });
 
 $('#hero').on('click', 'a', (event) => {
   event.preventDefault();
-  const id = $(this).attr('href');
+  const id = $(event.target).attr('href');
   const { top } = $(id).offset();
   $('body,html').animate({ scrollTop: top }, 1000);
 });
 
 $('.accordion-empty').on('click', 'a', (event) => {
   event.preventDefault();
-  const id = $(this).attr('href');
+  const id = $(event.target).attr('href');
   const { top } = $(id).offset();
   $('body,html').animate({ scrollTop: top }, 1000);
 });
@@ -436,22 +437,30 @@ $('#painters').on('click', 'a', (event) => {
 
 $('.gallery__descr').on('click', 'a', (event) => {
   event.preventDefault();
-  const id = $(this).attr('href');
+  const id = $(event.target).attr('href');
   const { top } = $(id).offset();
   $('body,html').animate({ scrollTop: top }, 1000);
 });
-function initial() {
-  const myMap = new ymaps.Map('map', {
-    center: [55.758701958592866, 37.60106810015546],
-    zoom: 15,
-  });
 
-  const myPlacemark = new ymaps.Placemark([55.758701958592866, 37.60106810015546], {}, {
-    iconLayout: 'default#image',
-    iconImageHref: 'img/map-marker.svg',
-    iconImageSize: [28, 40],
-  });
+let YaMapsShown = false;
 
-  myMap.geoObjects.add(myPlacemark);
-}
-ymaps.ready(initial);
+$(document).on('scroll', () => {
+  if (!YaMapsShown) {
+    if ($(window).scrollTop() + $(window).height() > $(document).height() - 700) {
+      ymaps.load('https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU').then((maps) => {
+        // eslint-disable-next-line no-unused-vars
+        const myMap = new maps.Map('map', {
+          center: [55.758701958592866, 37.60106810015546],
+          zoom: 15,
+        });
+
+        // eslint-disable-next-line no-unused-vars
+        const myPlacemark = new maps.Placemark([55.758701958592866, 37.60106810015546], {}, {
+          iconImageSize: [28, 40],
+        });
+        myMap.geoObjects.add(myPlacemark);
+      });
+      YaMapsShown = true;
+    }
+  }
+});

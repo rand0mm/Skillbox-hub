@@ -1,5 +1,6 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const webpack = require('webpack');
 
 module.exports = (env) => ({
@@ -60,7 +61,7 @@ module.exports = (env) => ({
       'window.jQuery': "jquery'",
       'window.$': 'jquery',
     }),
-
+    new CleanWebpackPlugin(),
   ],
   devServer: {
     historyApiFallback: true,
