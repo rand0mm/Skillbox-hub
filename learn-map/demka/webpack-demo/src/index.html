@@ -8,26 +8,6 @@
   <title>Blanchard</title>
   <link rel="icon" href="./assets/images/favicon.ico" type="image/x-icon">
   <script defer src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU" type="text/javascript"></script>
-  <script defer src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-  <script defer >
-    function initial() {
-      const myMap = new ymaps.Map('map', {
-        center: [55.758701958592866, 37.60106810015546],
-        zoom: 15,
-      });
-
-      const myPlacemark = new ymaps.Placemark([55.758701958592866, 37.60106810015546], {}, {
-        iconLayout: 'default#image',
-        iconImageHref: 'img/map-marker.svg',
-        iconImageSize: [28, 40],
-      });
-
-      myMap.geoObjects.add(myPlacemark);
-    }
-
-    ymaps.ready(initial);
-  </script>
-
 </head>
 
 <body>

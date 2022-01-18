@@ -1,4 +1,6 @@
-import Swiper from 'swiper';
+import Swiper, { EffectFade, Autoplay, Pagination } from 'swiper';
+
+Swiper.use([EffectFade, Pagination, Autoplay]);
 
 function heroSwiper() {
   // eslint-disable-next-line no-unused-vars

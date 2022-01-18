@@ -40,6 +40,11 @@ module.exports = (env) => ({
         test: /\.html$/i,
         loader: 'html-loader',
       },
+      {
+        test: /\.js$/,
+        enforce: 'pre',
+        use: ['source-map-loader'],
+      },
     ],
   },
   plugins: [
@@ -52,7 +57,10 @@ module.exports = (env) => ({
     new webpack.ProvidePlugin({
       $: 'jquery',
       jQuery: 'jquery',
+      'window.jQuery': "jquery'",
+      'window.$': 'jquery',
     }),
+
   ],
   devServer: {
     historyApiFallback: true,

@@ -1,4 +1,8 @@
-import Swiper from 'swiper';
+import Swiper, {
+  Navigation, A11y, Pagination, Grid,
+} from 'swiper';
+
+Swiper.use([Navigation, Pagination, A11y, Grid]);
 
 function gallerySlider() {
   // eslint-disable-next-line no-unused-vars

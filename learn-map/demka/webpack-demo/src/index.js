@@ -1,11 +1,13 @@
 /* eslint-disable no-new */
-import tippy from 'tippy.js';
-import 'tippy.js/dist/tippy.css';
-import SimpleBar from 'simplebar';
-import 'simplebar/dist/simplebar.css';
-import Swiper from 'swiper';
-import Choices from 'choices.js';
+// import ' /dist/tippy.css';
+// import 'simplebar/dist/simplebar.css';
 import $ from 'jquery';
+import tippy from 'tippy.js';
+import Swiper, {
+  Navigation, A11y, Pagination, Grid,
+} from 'swiper';
+import SimpleBar from 'simplebar';
+import Choices from 'choices.js';
 import heroSwiper from './js/swiper';
 import sendmail from './js/sendmail';
 import tabs from './js/tabs';
@@ -17,8 +19,12 @@ import navMenuFunc from './js/nav-menu';
 import modal from './js/modal';
 import './main.scss';
 
-window.jQuery = $;
-window.$ = $;
+require('webpack-jquery-ui/accordion');
+
+Swiper.use([Navigation, Pagination, A11y, Grid]);
+
+global.jQuery = $;
+global.$ = $;
 heroSwiper();
 sendmail();
 tabs();
@@ -174,14 +180,14 @@ let initB = false;
 function swiperMode() {
   // Enable (for mobile)
   if (mobile.matches) {
-    $(document).ready(() => {
-      $('#painters').on('click', 'a', (event) => {
-        event.preventDefault();
-        const id = $(this).attr('href');
-        const { top } = $(id).offset();
-        $('body,html').animate({ scrollTop: top }, 1000);
-      });
-    });
+    // $(document).ready(() => {
+    //   $('#painters').on('click', 'a', (event) => {
+    //     event.preventDefault();
+    //     const id = $(this).attr('href');
+    //     const { top } = $(id).offset();
+    //     $('body,html').animate({ scrollTop: top }, 1000);
+    //   });
+    // });
     if (editSwiper !== undefined) {
       editSwiper.destroy(true, true);
       initB = false;
@@ -434,3 +440,18 @@ $('.gallery__descr').on('click', 'a', (event) => {
   const { top } = $(id).offset();
   $('body,html').animate({ scrollTop: top }, 1000);
 });
+function initial() {
+  const myMap = new ymaps.Map('map', {
+    center: [55.758701958592866, 37.60106810015546],
+    zoom: 15,
+  });
+
+  const myPlacemark = new ymaps.Placemark([55.758701958592866, 37.60106810015546], {}, {
+    iconLayout: 'default#image',
+    iconImageHref: 'img/map-marker.svg',
+    iconImageSize: [28, 40],
+  });
+
+  myMap.geoObjects.add(myPlacemark);
+}
+ymaps.ready(initial);
