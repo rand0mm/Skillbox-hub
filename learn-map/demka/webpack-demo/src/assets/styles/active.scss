@@ -1,0 +1,212 @@
+:root {
+  --amethyst-color: #9D5CD0;
+  --royal-purple-color: #7943A4;
+  --heliotrope-color: #C283F3;
+  --amethyst-active-color: #D1A9F0;
+  --black-color: #000;
+  --white-color: #fff;
+  --text-color:#333333;
+  --grey-color: #999999;
+  --time-anim: .3s ease;
+}
+
+.logo:active {
+  transform: matrix(1, 0, 0, 1, 2, -2.2);
+}
+
+.nav__link:active {
+  color: var(--royal-purple-color);
+}
+
+.nav__link:hover::before {
+  opacity: 0;
+}
+
+.login:active {
+  color: var(--royal-purple-color);
+}
+
+.drop-btn:active {
+  color: var(--royal-purple-color);
+}
+
+.drop-down__link:active {
+  outline: 2px solid var(--amethyst-color);
+}
+
+.nav__link:hover::before,
+.login:hover::before,
+.gallery-content__link:hover::before,
+.gallery__descr-link:hover::before,
+.drop-down__link:hover::before,
+.drop-btn:hover::before,
+.accordion-empty__link:hover::before,
+.accordion .accordion__caption:hover::before,
+.painter-list__tab:hover::before,
+.event-card__link:hover:before,
+.event__btn:hover::before,
+.proj__link:hover::before {
+  opacity: 0;
+}
+
+.nav__link:active::before,
+.login:active::before,
+.gallery-content__link:active::before,
+.gallery__descr-link:active::before,
+.drop-down__link:active::before,
+.drop-btn:active::before,
+.accordion-empty__link:active::before,
+.accordion .accordion__caption:active::before,
+.painter-list__tab:active::before,
+.event-card__link:active:before,
+.event__btn:active::before,
+.proj__link:hover::before {
+  opacity: 0;
+}
+
+.search-form__input:active {
+  border-color: var(--royal-purple-color);
+}
+
+.hero__link:active {
+  background-color: var(--royal-purple-color);
+}
+
+.hero__link:active::before {
+  top: -3px;
+  right: -3px;
+  bottom: -3px;
+  left: -3px;
+  border: 3px solid var(--amethyst-active-color);
+  opacity: 1;
+}
+
+.gallery__descr-link:active {
+  color: var(--royal-purple-color);
+}
+
+.gallery__slide:active .gallery-content__link {
+  border: 2px solid var(--amethyst-active-color) ;
+}
+
+.gallery__slide:active .gallery-content__link::after {
+  opacity: 1;
+}
+
+.swiper-button-next:active,
+.swiper-button-prev:active {
+  border: 2px solid #000;
+  background-color: var(--royal-purple-color);
+}
+
+.proj__slider-btn-prev:active,
+.proj__slider-btn-next:active {
+  border: 2px solid var(--amethyst-color);
+}
+
+.proj__slider-btn-prev:active svg > path ,
+.proj__slider-btn-next:active svg > path  {
+ fill: var(--amethyst-active-color)
+}
+
+.tabs__btn:active::after {
+  opacity: 1;
+}
+
+.proj__link:active::after {
+  opacity: 1;
+}
+
+.accordion-empty__link:active  {
+  color: var(--royal-purple-color);
+}
+
+.ui-accordion-header:active,
+.ui-accordion-header:active + .ui-accordion-content +.ui-accordion-header {
+  border-color: var(--royal-purple-color);
+}
+
+.ui-accordion-header:active .accordion .accordion__caption {
+  color: var(--royal-purple-color);
+}
+
+
+.painter-list__tab:active {
+  color: var(--royal-purple-color);
+}
+
+.painter-list__tab:active {
+  color: var(--royal-purple-color);
+}
+
+.painter-list__tab:active::after {
+  opacity: 0;
+}
+
+.event-card__link:active {
+  color: var(--text-color);
+}
+
+.proj__link:active {
+  color: var(--royal-purple-color);
+}
+
+.event__btn:active::after {
+  border: 3px solid var(--amethyst-active-color);
+  background-color: var(--amethyst-color);
+}
+
+.event__btn:active {
+  color: var(--white-color);
+}
+
+.callback__form-btn:active::after {
+  border: 3px solid var(--amethyst-active-color);
+  background-color: var(--amethyst-color);
+}
+
+.callback__form-btn:active {
+  color: var(--white-color);
+}
+
+.edit-card__btn:active::after {
+  border: 3px solid var(--amethyst-active-color);
+  background-color: var(--amethyst-color);
+}
+
+.edit-card__btn:active {
+  color: var(--white-color);
+}
+
+
+.proj__slider-link:active .proj__slider-link-pict  {
+  filter: grayscale(0);
+  opacity: 1;
+}
+
+.proj__slider-link:active {
+  border-color: var(--amethyst-color);
+}
+
+.tooltip-icon:active svg path {
+  fill: var(--amethyst-color);
+  stroke: var(--amethyst-color);
+}
+
+.tooltip-icon:active svg > path + path {
+  fill: var(--white-color);
+  stroke: transparent;
+}
+
+.social-list__link:active svg path {
+  fill: var(--amethyst-color);
+}
+
+.contacts__link:active::before {
+  opacity: 1;
+}
+
+.contacts__link:active {
+  opacity: 1;
+}
+

@@ -10,7 +10,15 @@
   },
   "author": "Dmitriy",
   "dependencies": {
-    "babel-polyfill": "^6.26.0"
+    "@popperjs/core": "^2.11.2",
+    "babel-polyfill": "^6.26.0",
+    "choices.js": "^10.0.0",
+    "inputmask": "^5.0.7",
+    "jquery": "^3.6.0",
+    "just-validate": "^3.3.0",
+    "simplebar": "^5.3.6",
+    "swiper": "^7.4.1",
+    "tippy.js": "^6.3.7"
   },
   "devDependencies": {
     "@babel/core": "^7.16.5",
@@ -30,6 +38,7 @@
     "style-loader": "^3.3.1",
     "webpack": "^5.65.0",
     "webpack-cli": "^4.9.1",
-    "webpack-dev-server": "^4.7.3"
+    "webpack-dev-server": "^4.7.3",
+    "webpack-provide-global-plugin": "0.0.1"
   }
 }

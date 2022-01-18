@@ -1,5 +1,6 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const webpack = require('webpack');
 
 module.exports = (env) => ({
   entry: './src/index.js',
@@ -28,7 +29,7 @@ module.exports = (env) => ({
         type: 'asset/resource',
       },
       {
-        test: /\.scss$/i,
+        test: /\.scss|css$/i,
         use: [
           env.prod ? MiniCssExtractPlugin.loader : 'style-loader',
           'css-loader',
@@ -48,7 +49,10 @@ module.exports = (env) => ({
     new MiniCssExtractPlugin({
       filename: 'main.[contenthash].css',
     }),
-
+    new webpack.ProvidePlugin({
+      $: 'jquery',
+      jQuery: 'jquery',
+    }),
   ],
   devServer: {
     historyApiFallback: true,
