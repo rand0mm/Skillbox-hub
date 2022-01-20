@@ -77,6 +77,7 @@ function modal() {
       modalObj.addEventListener('click', (e) => {
         const modalName = modalObj.getAttribute('href').replace('#', '');
         const curentModal = document.getElementById(modalName);
+        console.log(e.img)
         modalOpen(curentModal);
         e.preventDefault();
       });

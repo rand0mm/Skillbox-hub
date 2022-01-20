@@ -15,38 +15,45 @@
         <a href="#index.html" class="link-reset logo header__logo" aria-label="">
           <img class="logo__icon" src="./assets/images/logo.svg" alt="Логотип">
         </a>
-        <div id="nav-menu" class="nav-menu header__nav-menu flex">
-          <nav aria-label="Панель управления" class="nav nav-menu__nav" id="menu">
-            <ul class="list-reset nav__list nav-menu__list" aria-label="Навигация страницы">
-              <li class="nav__item menu-nav__item">
-                <a aria-label="Личный кабинет" href="#" class="link-reset flex  ">
-                  <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="12.4595" cy="8.18919" r="3.68919" stroke="#333333"/>
-                    <path d="M4.5 19.3379H19.5" stroke="#333333"/>
-                    <path d="M4.5 19.84C4.5 16.4347 8.84699 13.9134 12.2143 14.0023C15.4328 14.0872 19.5 16.4347 19.5 19.84" stroke="#333333"/>
-                  </svg>
-                </a>
-              </li>
-              <li class="nav__item menu-nav__item">
-                <a aria-label="Избранное" href="#" class="link-reset flex  ">
-                  <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M11.8999 7.0948C10.6997 1.47892 1.40869 5.90389 5.76025 11.6018C10.1118 17.2996 12.3999 19.4908 12.3999 19.4908" stroke="#333333"/>
-                    <path d="M11.8941 7.0948C13.0943 1.47892 22.7304 5.90389 18.3788 11.6018C14.0272 17.2996 11.7 19.5 11.7 19.5" stroke="#333333"/>
-                    <path d="M11.391 6.70752L12.4043 6.70757L12.3834 7.24079H11.391V6.70752Z" fill="#333333"/>
-                  </svg>
-                </a>
-              </li>
-              <li class="nav__item menu-nav__item">
-                <a aria-label="Корзина" href="#" class="link-reset flex ">
-                  <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M7.74689 7.86865H16.2531C17.7116 7.86865 18.8604 9.11201 18.7453 10.566L18.2203 17.1975C18.1174 18.4977 17.0323 19.5002 15.7281 19.5002H8.27189C6.96769 19.5002 5.88261 18.4977 5.77968 17.1975L5.25468 10.5659C5.13958 9.11201 6.2884 7.86865 7.74689 7.86865Z" stroke="#333333"/>
-                    <path d="M8.00005 12.5C8.00005 12.5 7.78335 4 12.0001 4C16.2168 4 16.0001 12.5 16.0001 12.5" stroke="#333333"/>
-                  </svg>
-                </a>
-              </li>
-            </ul>
-          </nav>
-        </div>
+        <ul class="list-reset control" aria-label="Панель управления">
+          <li class="control__item">
+            <a aria-label="Личный кабинет" href="#" class="link-reset flex  control-link">
+              <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle class="control-link__icon" cx="12.4595" cy="8.18919" r="3.68919" stroke="#333333" />
+                <path class="control-link__icon" d="M4.5 19.3379H19.5" stroke="#333333" />
+                <path class="control-link__icon"
+                  d="M4.5 19.84C4.5 16.4347 8.84699 13.9134 12.2143 14.0023C15.4328 14.0872 19.5 16.4347 19.5 19.84"
+                  stroke="#333333" />
+              </svg>
+            </a>
+          </li>
+          <li class="control__item">
+            <a aria-label="Избранное" href="#" class="link-reset flex  control-link">
+              <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path class="control-link__icon"
+                  d="M11.8999 7.0948C10.6997 1.47892 1.40869 5.90389 5.76025 11.6018C10.1118 17.2996 12.3999 19.4908 12.3999 19.4908"
+                  stroke="#333333" />
+                <path class="control-link__icon"
+                  d="M11.8941 7.0948C13.0943 1.47892 22.7304 5.90389 18.3788 11.6018C14.0272 17.2996 11.7 19.5 11.7 19.5"
+                  stroke="#333333" />
+                <path class="control-link__icon" d="M11.391 6.70752L12.4043 6.70757L12.3834 7.24079H11.391V6.70752Z"
+                  fill="#333333" />
+              </svg>
+            </a>
+          </li>
+          <li class="control__item">
+            <a aria-label="Корзина" href="#" class="link-reset flex control-link">
+              <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path class="control-link__icon"
+                  d="M7.74689 7.86865H16.2531C17.7116 7.86865 18.8604 9.11201 18.7453 10.566L18.2203 17.1975C18.1174 18.4977 17.0323 19.5002 15.7281 19.5002H8.27189C6.96769 19.5002 5.88261 18.4977 5.77968 17.1975L5.25468 10.5659C5.13958 9.11201 6.2884 7.86865 7.74689 7.86865Z"
+                  stroke="#333333" />
+                <path class="control-link__icon"
+                  d="M8.00005 12.5C8.00005 12.5 7.78335 4 12.0001 4C16.2168 4 16.0001 12.5 16.0001 12.5"
+                  stroke="#333333" />
+              </svg>
+            </a>
+          </li>
+        </ul>
       </div>
     </header>
     <main>
@@ -109,7 +116,8 @@
                         srcset="./assets/images/left-box-one-1920.webp, ./assets/images/left-box-one-1920@2x.webp 2x">
                       <source media="(max-width: 568px)" type="image/webp"
                         srcset="./assets/images/left-box-one-1920.webp, ./assets/images/left-box-one-1920@2x.webp 2x">
-                      <img class="left-box__mini-image" src="./assets/images/left-box-one-1920.png" alt="Картинка товара">
+                      <img class="left-box__mini-image" src="./assets/images/left-box-one-1920.png"
+                        alt="Картинка товара">
                     </picture>
                   </div>
                   <div class="swiper-slide left-box__slide">
@@ -118,7 +126,8 @@
                         srcset="./assets/images/left-box-two-1920.webp, ./assets/images/left-box-two-1920@2x.webp 2x">
                       <source media="(max-width: 568px)" type="image/webp"
                         srcset="./assets/images/left-box-two-1920.webp, ./assets/images/left-box-two-1920@2x.webp 2x">
-                      <img class=" left-box__mini-image" src="./assets/images/left-box-two-1920.png" alt="Картинка товара">
+                      <img class=" left-box__mini-image" src="./assets/images/left-box-two-1920.png"
+                        alt="Картинка товара">
                     </picture>
                   </div>
                   <div class="swiper-slide left-box__slide">
@@ -127,7 +136,8 @@
                         srcset="./assets/images/left-box-three-1920.webp, ./assets/images/left-box-three-1920@2x.webp 2x">
                       <source media="(max-width: 568px)" type="image/webp"
                         srcset="./assets/images/left-box-three-1920.webp, ./assets/images/left-box-three-1920@2x.webp 2x">
-                      <img class="left-box__mini-image" src="./assets/images/left-box-three-1920.png" alt="Картинка товара">
+                      <img class="left-box__mini-image" src="./assets/images/left-box-three-1920.png"
+                        alt="Картинка товара">
                     </picture>
                   </div>
                   <div class="swiper-slide left-box__slide">
@@ -136,7 +146,8 @@
                         srcset="./assets/images/left-box-four-1920.webp, ./assets/images/left-box-four-1920@2x.webp 2x">
                       <source media="(max-width: 568px)" type="image/webp"
                         srcset="./assets/images/left-box-four-1920.webp, ./assets/images/left-box-four-1920@2x.webp 2x">
-                      <img class="left-box__mini-image" src="./assets/images/left-box-four-1920.png" alt="Картинка товара">
+                      <img class="left-box__mini-image" src="./assets/images/left-box-four-1920.png"
+                        alt="Картинка товара">
                     </picture>
                   </div>
                   <div class="swiper-slide left-box__slide">
@@ -145,7 +156,8 @@
                         srcset="./assets/images/left-box-five-1920.webp, ./assets/images/left-box-five-1920@2x.webp 2x">
                       <source media="(max-width: 568px)" type="image/webp"
                         srcset="./assets/images/left-box-five-1920.webp, ./assets/images/left-box-five-1920@2x.webp 2x">
-                      <img class="left-box__mini-image" src="./assets/images/left-box-five-1920.png" alt="Картинка товара">
+                      <img class="left-box__mini-image" src="./assets/images/left-box-five-1920.png"
+                        alt="Картинка товара">
                     </picture>
                   </div>
                 </div>
@@ -171,8 +183,9 @@
                 </span>
                 <a href="" class="product-card__rate-link rate-link link-reset">
                   14 отзывов
-                  <svg class="rate-link__icon" width="10" height="15" viewbox="0 0 10 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M1 1L9 8L1 14.5" stroke="#333333"/>
+                  <svg class="rate-link__icon" width="10" height="15" viewbox="0 0 10 15" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 1L9 8L1 14.5" stroke="#333333" />
                   </svg>
                 </a>
               </div>
@@ -184,8 +197,9 @@
                   <span class="price__initial-price">
                     1 500 ₽
                   </span>
-                  <svg class="price__icon" width="10" height="15" viewbox="0 0 10 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M1 1L9 8L1 14.5" stroke="#333333"/>
+                  <svg class="price__icon" width="10" height="15" viewbox="0 0 10 15" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 1L9 8L1 14.5" stroke="#333333" />
                   </svg>
                 </div>
                 <div class="price__down-container price-down">
@@ -209,55 +223,62 @@
                 <a href="#" class="product-card_size-link link-reset link">Определить размер</a>
               </div>
               <div class="product-card_card-btns card-btns">
-                <div class="card-btns_counter counter">
-                  <button class="counter_plus btn">+</button>
-                  <span class="counter_display">
+                <div class="card-btns__counter counter">
+                  <button class="counter__btn btn">+</button>
+                  <span class="counter__display">
                     1
                   </span>
-                  <button class="counter_minus btn">-</button>
+                  <button class="counter__btn btn">-</button>
                 </div>
-                <button class="btn card-btns_add">
+                <button class="btn card-btns__add">
                   Добавить в корзину
                 </button>
-                <button class="btn card-btns_chosen">
+                <button class="btn card-btns__chosen">
                   <svg width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M7.90002 3.0948C6.69981 -2.52108 -2.59119 1.90389 1.76037 7.60175C6.11193 13.2996 8.40002 15.4908 8.40002 15.4908" stroke="white"/>
-                    <path d="M7.89415 3.0948C9.09435 -2.52108 18.7304 1.90389 14.3789 7.60175C10.0273 13.2996 7.70001 15.5 7.70001 15.5" stroke="white"/>
-                    <path d="M7.39099 2.70752L8.4043 2.70757L8.38337 3.24079H7.39099V2.70752Z" fill="white"/>
+                    <path
+                      d="M7.90002 3.0948C6.69981 -2.52108 -2.59119 1.90389 1.76037 7.60175C6.11193 13.2996 8.40002 15.4908 8.40002 15.4908"
+                      stroke="white" />
+                    <path
+                      d="M7.89415 3.0948C9.09435 -2.52108 18.7304 1.90389 14.3789 7.60175C10.0273 13.2996 7.70001 15.5 7.70001 15.5"
+                      stroke="white" />
+                    <path d="M7.39099 2.70752L8.4043 2.70757L8.38337 3.24079H7.39099V2.70752Z" fill="white" />
                   </svg>
                 </button>
               </div>
               <a href="#" class="product-card_buy-link link-reset link">Купить в 1 клик</a>
               <div class="line"></div>
               <ul class="product-card_links-list links-list list-reset">
-                <li class="links-list_item">
+                <li class="links-list__item">
                   <a href="#" class="product-card_prod-link link-reset link">
                     <svg width="20" height="20" viewbox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <circle cx="10" cy="10" r="7" stroke="#333333"/>
-                      <path d="M6 8C6.24928 8 8.75787 6.5 8.75787 6.5H10.0043H11.2507C11.2507 6.5 13.7507 8 14 8" stroke="#333333"/>
-                      <path d="M6.01577 7.39283L6.01576 9.17806L7.76075 9.4756L7.76075 13.9386" stroke="#333333"/>
-                      <path d="M13.9842 7.39283L13.9842 9.17806L12.2393 9.4756L12.2478 13.9386" stroke="#333333"/>
-                      <line x1="7.51145" y1="13.4385" x2="12.4971" y2="13.4385" stroke="#333333"/>
-                      <path d="M8.50859 6.5C8.50859 6.5 9.00716 8.28522 10.0043 8.28522C11.0014 8.28522 11.5 6.5 11.5 6.5" stroke="#333333"/>
+                      <circle cx="10" cy="10" r="7" stroke="#333333" />
+                      <path d="M6 8C6.24928 8 8.75787 6.5 8.75787 6.5H10.0043H11.2507C11.2507 6.5 13.7507 8 14 8"
+                        stroke="#333333" />
+                      <path d="M6.01577 7.39283L6.01576 9.17806L7.76075 9.4756L7.76075 13.9386" stroke="#333333" />
+                      <path d="M13.9842 7.39283L13.9842 9.17806L12.2393 9.4756L12.2478 13.9386" stroke="#333333" />
+                      <line x1="7.51145" y1="13.4385" x2="12.4971" y2="13.4385" stroke="#333333" />
+                      <path
+                        d="M8.50859 6.5C8.50859 6.5 9.00716 8.28522 10.0043 8.28522C11.0014 8.28522 11.5 6.5 11.5 6.5"
+                        stroke="#333333" />
                     </svg>
                     Описание товара
                   </a>
                 </li>
-                <li class="links-list_item">
+                <li class="links-list__item">
                   <a href="#" class="product-card_prod-link link-reset link">
                     <svg width="20" height="20" viewbox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <circle cx="10" cy="10" r="7" fill="white" stroke="#333333"/>
-                      <path d="M9.55453 5.5L9.55453 10.7061L13.5 13" stroke="#333333"/>
+                      <circle cx="10" cy="10" r="7" fill="white" stroke="#333333" />
+                      <path d="M9.55453 5.5L9.55453 10.7061L13.5 13" stroke="#333333" />
                     </svg>
                     Доставка и возврат
                   </a>
                 </li>
-                <li class="links-list_item">
+                <li class="links-list__item">
                   <a href="#" class="product-card_prod-link link-reset link">
                     <svg width="20" height="20" viewbox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <rect x="3.5" y="5.5" width="13" height="9" rx="0.5" stroke="#333333"/>
-                      <rect x="4" y="8" width="12" height="2" fill="#333333"/>
-                      </svg>
+                      <rect x="3.5" y="5.5" width="13" height="9" rx="0.5" stroke="#333333" />
+                      <rect x="4" y="8" width="12" height="2" fill="#333333" />
+                    </svg>
                     Способы оплаты
                   </a>
                 </li>
@@ -268,22 +289,35 @@
       </section>
       <section class="bottom-content">
         <div class="container bottom-content__container">
-          <a href="#" class="bottom-content__link link-reset link">
-            Посмотреть все стили
-          </a>
+          <div class="bottom-content__link-container">
+            <a href="#" class="bottom-content__link link-reset link">
+              Посмотреть все стили
+            </a>
+          </div>
           <div class="gallery">
-            <ul class="gallery__list">
+            <ul class="gallery__list list-reset">
               <li class="gallery__card gallery__card_one" aria-label="Галерея">
-                1
-              </li>
-              <li class="gallery__card gallery__card_two">
-                1
+                <a href="#" class="gallery__card-link card-link">
+                  <button class="btn card-link__btn"></button>
+                  <span class="card-link__icon"></span>
+                  Узнай что на мне
+                  <div class="card-link__like-counter">
+                  <span class="card-link__like-icon"></span>
+                    200
+                  </div>
+                </a>
               </li>
               <li class="gallery__card">
-                1
+                <a href="#" class="gallery__card-link card-link">Узнай что на мне</a>
               </li>
               <li class="gallery__card">
-                1
+                <a href="#" class="gallery__card-link card-link">Узнай что на мне</a>
+              </li>
+              <li class="gallery__card">
+                <a href="#" class="gallery__card-link card-link">Узнай что на мне</a>
+              </li>
+              <li class="gallery__card">
+                <a href="#" class="gallery__card-link card-link">Узнай что на мне</a>
               </li>
             </ul>
           </div>
