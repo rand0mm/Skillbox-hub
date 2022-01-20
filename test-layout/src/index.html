@@ -211,7 +211,7 @@
                   </div>
                 </div>
               </div>
-              <div class="product-card_size size">
+              <div class="product-card__size size">
                 <select id="product-card-size" name="product-card-size" class="choices">
                   <option value="">Выбрать размер</option>
                   <option value="S">S</option>
@@ -220,9 +220,9 @@
                   <option value="XL">XL</option>
                   <option value="XXL">XXL</option>
                 </select>
-                <a href="#" class="product-card_size-link link-reset link">Определить размер</a>
+                <a href="#" class="product-card__size-link link-reset link">Определить размер</a>
               </div>
-              <div class="product-card_card-btns card-btns">
+              <div class="product-card__card-btns card-btns">
                 <div class="card-btns__counter counter">
                   <button class="counter__btn btn">+</button>
                   <span class="counter__display">
@@ -245,11 +245,11 @@
                   </svg>
                 </button>
               </div>
-              <a href="#" class="product-card_buy-link link-reset link">Купить в 1 клик</a>
+              <a href="#" class="product-card__buy-link link-reset link">Купить в 1 клик</a>
               <div class="line"></div>
-              <ul class="product-card_links-list links-list list-reset">
+              <ul class="product-card__links-list links-list list-reset">
                 <li class="links-list__item">
-                  <a href="#" class="product-card_prod-link link-reset link">
+                  <a href="#" class="product-card__prod-link link-reset link">
                     <svg width="20" height="20" viewbox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <circle cx="10" cy="10" r="7" stroke="#333333" />
                       <path d="M6 8C6.24928 8 8.75787 6.5 8.75787 6.5H10.0043H11.2507C11.2507 6.5 13.7507 8 14 8"
@@ -265,7 +265,7 @@
                   </a>
                 </li>
                 <li class="links-list__item">
-                  <a href="#" class="product-card_prod-link link-reset link">
+                  <a href="#" class="product-card__prod-link link-reset link">
                     <svg width="20" height="20" viewbox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <circle cx="10" cy="10" r="7" fill="white" stroke="#333333" />
                       <path d="M9.55453 5.5L9.55453 10.7061L13.5 13" stroke="#333333" />
@@ -274,7 +274,7 @@
                   </a>
                 </li>
                 <li class="links-list__item">
-                  <a href="#" class="product-card_prod-link link-reset link">
+                  <a href="#" class="product-card__prod-link link-reset link">
                     <svg width="20" height="20" viewbox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <rect x="3.5" y="5.5" width="13" height="9" rx="0.5" stroke="#333333" />
                       <rect x="4" y="8" width="12" height="2" fill="#333333" />
@@ -297,27 +297,179 @@
           <div class="gallery">
             <ul class="gallery__list list-reset">
               <li class="gallery__card gallery__card_one" aria-label="Галерея">
-                <a href="#" class="gallery__card-link card-link">
-                  <button class="btn card-link__btn"></button>
-                  <span class="card-link__icon"></span>
+                <picture>
+                  <source media="(min-width: 1025px)" type="image/webp"
+                    srcset="./assets/images/gallery-1-1920.webp, ./assets/images//gallery-1-1920@2x.webp 2x">
+                  <source media="(max-width: 568px)" type="image/webp"
+                    srcset="./assets/images/gallery-1-1920.webp, ./assets/images/gallery-1-1920@2x.webp 2x">
+                  <img class="gallery__image gallery__image_bigger" src="./assets/images/gallery-1-1920.png" alt="Картинка в галереи">
+                </picture>
+                <a href="#" class="gallery__card-link card-link link-reset">
+                  <button class="btn card-link__btn">
+                    <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <rect x="4.5" y="6.5" width="13" height="13" rx="1.5" stroke="white"/>
+                      <path d="M6.33784 6.63126L6.33784 6.49958C6.33784 5.39501 7.23327 4.49958 8.33784 4.49958L17.5 4.49959C18.6045 4.49959 19.5 5.39502 19.5 6.49959L19.5 15.9382C19.5 16.9853 18.5159 17.7537 17.5 17.4997V17.4997" stroke="white"/>
+                    </svg>
+                  </button>
+                  <span class="card-link__icon">
+                    <svg width="48" height="48" viewbox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M11.2445 14.2998H36.7555C38.2133 14.2998 39.3618 15.542 39.2478 16.9953L37.5851 38.1953C37.4831 39.4962 36.3976 40.4998 35.0927 40.4998H12.9073C11.6024 40.4998 10.5169 39.4962 10.4149 38.1953L8.75216 16.9953C8.63818 15.542 9.78674 14.2998 11.2445 14.2998Z" stroke="white"/>
+                      <path d="M15.004 24.4857C15.004 24.4857 14.5437 7 23.5 7C32.4563 7 31.996 24.4857 31.996 24.4857" stroke="white"/>
+                    </svg>
+                  </span>
                   Узнай что на мне
                   <div class="card-link__like-counter">
-                  <span class="card-link__like-icon"></span>
+                  <span class="card-link__like-icon">
+                    <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M12.4287 7.25725L13.7612 5.03654L17.1965 5.46595L18.5 7.63849V10.3206L12.0145 18.1959L5.93878 10.2507L5.05633 8.04458L6.34555 5.89588L9.35443 4.60636L11.6159 7.32009L12.0665 7.86089L12.4287 7.25725Z" fill="white" stroke="white"/>
+                      <path d="M11.9 7.0948C10.6998 1.47892 1.40879 5.90389 5.76035 11.6018C10.1119 17.2996 12.4 19.4908 12.4 19.4908" stroke="white"/>
+                      <path d="M11.8941 7.0948C13.0943 1.47892 22.7304 5.90389 18.3788 11.6018C14.0273 17.2996 11.7 19.5 11.7 19.5" stroke="white"/>
+                      <path d="M11.391 6.70752L12.4043 6.70757L12.3834 7.24079H11.391V6.70752Z" fill="white"/>
+                    </svg>
+                  </span>
                     200
                   </div>
                 </a>
               </li>
               <li class="gallery__card">
-                <a href="#" class="gallery__card-link card-link">Узнай что на мне</a>
+                <picture>
+                  <source media="(min-width: 1025px)" type="image/webp"
+                    srcset="./assets/images/gallery-2-1920.webp, ./assets/images//gallery-2-1920@2x.webp 2x">
+                  <source media="(max-width: 568px)" type="image/webp"
+                    srcset="./assets/images/gallery-2-1920.webp, ./assets/images/gallery-2-1920@2x.webp 2x">
+                  <img class="gallery__image" src="./assets/images/gallery-2-1920.png" alt="Картинка в галереи">
+                </picture>
+                <a href="#" class="gallery__card-link card-link link-reset">
+                  <button class="btn card-link__btn">
+                    <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <rect x="4.5" y="6.5" width="13" height="13" rx="1.5" stroke="white"/>
+                      <path d="M6.33784 6.63126L6.33784 6.49958C6.33784 5.39501 7.23327 4.49958 8.33784 4.49958L17.5 4.49959C18.6045 4.49959 19.5 5.39502 19.5 6.49959L19.5 15.9382C19.5 16.9853 18.5159 17.7537 17.5 17.4997V17.4997" stroke="white"/>
+                    </svg>
+                  </button>
+                  <span class="card-link__icon">
+                    <svg width="48" height="48" viewbox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M11.2445 14.2998H36.7555C38.2133 14.2998 39.3618 15.542 39.2478 16.9953L37.5851 38.1953C37.4831 39.4962 36.3976 40.4998 35.0927 40.4998H12.9073C11.6024 40.4998 10.5169 39.4962 10.4149 38.1953L8.75216 16.9953C8.63818 15.542 9.78674 14.2998 11.2445 14.2998Z" stroke="white"/>
+                      <path d="M15.004 24.4857C15.004 24.4857 14.5437 7 23.5 7C32.4563 7 31.996 24.4857 31.996 24.4857" stroke="white"/>
+                    </svg>
+                  </span>
+                  Узнай что на мне
+                  <div class="card-link__like-counter">
+                  <span class="card-link__like-icon">
+                    <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M12.4287 7.25725L13.7612 5.03654L17.1965 5.46595L18.5 7.63849V10.3206L12.0145 18.1959L5.93878 10.2507L5.05633 8.04458L6.34555 5.89588L9.35443 4.60636L11.6159 7.32009L12.0665 7.86089L12.4287 7.25725Z" fill="white" stroke="white"/>
+                      <path d="M11.9 7.0948C10.6998 1.47892 1.40879 5.90389 5.76035 11.6018C10.1119 17.2996 12.4 19.4908 12.4 19.4908" stroke="white"/>
+                      <path d="M11.8941 7.0948C13.0943 1.47892 22.7304 5.90389 18.3788 11.6018C14.0273 17.2996 11.7 19.5 11.7 19.5" stroke="white"/>
+                      <path d="M11.391 6.70752L12.4043 6.70757L12.3834 7.24079H11.391V6.70752Z" fill="white"/>
+                    </svg>
+                  </span>
+                    200
+                  </div>
+                </a>
               </li>
               <li class="gallery__card">
-                <a href="#" class="gallery__card-link card-link">Узнай что на мне</a>
+                <picture>
+                  <source media="(min-width: 1025px)" type="image/webp"
+                    srcset="./assets/images/gallery-4-1920.webp, ./assets/images//gallery-4-1920@2x.webp 2x">
+                  <source media="(max-width: 568px)" type="image/webp"
+                    srcset="./assets/images/gallery-4-1920.webp, ./assets/images/gallery-4-1920@2x.webp 2x">
+                  <img class="gallery__image" src="./assets/images/gallery-4-1920.png" alt="Картинка в галереи">
+                </picture>
+                <a href="#" class="gallery__card-link card-link link-reset">
+                  <button class="btn card-link__btn">
+                    <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <rect x="4.5" y="6.5" width="13" height="13" rx="1.5" stroke="white"/>
+                      <path d="M6.33784 6.63126L6.33784 6.49958C6.33784 5.39501 7.23327 4.49958 8.33784 4.49958L17.5 4.49959C18.6045 4.49959 19.5 5.39502 19.5 6.49959L19.5 15.9382C19.5 16.9853 18.5159 17.7537 17.5 17.4997V17.4997" stroke="white"/>
+                    </svg>
+                  </button>
+                  <span class="card-link__icon">
+                    <svg width="48" height="48" viewbox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M11.2445 14.2998H36.7555C38.2133 14.2998 39.3618 15.542 39.2478 16.9953L37.5851 38.1953C37.4831 39.4962 36.3976 40.4998 35.0927 40.4998H12.9073C11.6024 40.4998 10.5169 39.4962 10.4149 38.1953L8.75216 16.9953C8.63818 15.542 9.78674 14.2998 11.2445 14.2998Z" stroke="white"/>
+                      <path d="M15.004 24.4857C15.004 24.4857 14.5437 7 23.5 7C32.4563 7 31.996 24.4857 31.996 24.4857" stroke="white"/>
+                    </svg>
+                  </span>
+                  Узнай что на мне
+                  <div class="card-link__like-counter">
+                  <span class="card-link__like-icon">
+                    <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M12.4287 7.25725L13.7612 5.03654L17.1965 5.46595L18.5 7.63849V10.3206L12.0145 18.1959L5.93878 10.2507L5.05633 8.04458L6.34555 5.89588L9.35443 4.60636L11.6159 7.32009L12.0665 7.86089L12.4287 7.25725Z" fill="white" stroke="white"/>
+                      <path d="M11.9 7.0948C10.6998 1.47892 1.40879 5.90389 5.76035 11.6018C10.1119 17.2996 12.4 19.4908 12.4 19.4908" stroke="white"/>
+                      <path d="M11.8941 7.0948C13.0943 1.47892 22.7304 5.90389 18.3788 11.6018C14.0273 17.2996 11.7 19.5 11.7 19.5" stroke="white"/>
+                      <path d="M11.391 6.70752L12.4043 6.70757L12.3834 7.24079H11.391V6.70752Z" fill="white"/>
+                    </svg>
+                  </span>
+                    200
+                  </div>
+                </a>
               </li>
               <li class="gallery__card">
-                <a href="#" class="gallery__card-link card-link">Узнай что на мне</a>
+                <picture>
+                  <source media="(min-width: 1025px)" type="image/webp"
+                    srcset="./assets/images/gallery-3-1920.webp, ./assets/images//gallery-3-1920@2x.webp 2x">
+                  <source media="(max-width: 568px)" type="image/webp"
+                    srcset="./assets/images/gallery-3-1920.webp, ./assets/images/gallery-3-1920@2x.webp 2x">
+                  <img class="gallery__image" src="./assets/images/gallery-3-1920.png" alt="Картинка в галереи">
+                </picture>
+                <a href="#" class="gallery__card-link card-link link-reset">
+                  <button class="btn card-link__btn">
+                    <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <rect x="4.5" y="6.5" width="13" height="13" rx="1.5" stroke="white"/>
+                      <path d="M6.33784 6.63126L6.33784 6.49958C6.33784 5.39501 7.23327 4.49958 8.33784 4.49958L17.5 4.49959C18.6045 4.49959 19.5 5.39502 19.5 6.49959L19.5 15.9382C19.5 16.9853 18.5159 17.7537 17.5 17.4997V17.4997" stroke="white"/>
+                    </svg>
+                  </button>
+                  <span class="card-link__icon">
+                    <svg width="48" height="48" viewbox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M11.2445 14.2998H36.7555C38.2133 14.2998 39.3618 15.542 39.2478 16.9953L37.5851 38.1953C37.4831 39.4962 36.3976 40.4998 35.0927 40.4998H12.9073C11.6024 40.4998 10.5169 39.4962 10.4149 38.1953L8.75216 16.9953C8.63818 15.542 9.78674 14.2998 11.2445 14.2998Z" stroke="white"/>
+                      <path d="M15.004 24.4857C15.004 24.4857 14.5437 7 23.5 7C32.4563 7 31.996 24.4857 31.996 24.4857" stroke="white"/>
+                    </svg>
+                  </span>
+                  Узнай что на мне
+                  <div class="card-link__like-counter">
+                  <span class="card-link__like-icon">
+                    <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M12.4287 7.25725L13.7612 5.03654L17.1965 5.46595L18.5 7.63849V10.3206L12.0145 18.1959L5.93878 10.2507L5.05633 8.04458L6.34555 5.89588L9.35443 4.60636L11.6159 7.32009L12.0665 7.86089L12.4287 7.25725Z" fill="white" stroke="white"/>
+                      <path d="M11.9 7.0948C10.6998 1.47892 1.40879 5.90389 5.76035 11.6018C10.1119 17.2996 12.4 19.4908 12.4 19.4908" stroke="white"/>
+                      <path d="M11.8941 7.0948C13.0943 1.47892 22.7304 5.90389 18.3788 11.6018C14.0273 17.2996 11.7 19.5 11.7 19.5" stroke="white"/>
+                      <path d="M11.391 6.70752L12.4043 6.70757L12.3834 7.24079H11.391V6.70752Z" fill="white"/>
+                    </svg>
+                  </span>
+                    200
+                  </div>
+                </a>
               </li>
               <li class="gallery__card">
-                <a href="#" class="gallery__card-link card-link">Узнай что на мне</a>
+                <picture>
+                  <source media="(min-width: 1025px)" type="image/webp"
+                    srcset="./assets/images/gallery-5-1920.webp, ./assets/images//gallery-5-1920@2x.webp 2x">
+                  <source media="(max-width: 568px)" type="image/webp"
+                    srcset="./assets/images/gallery-5-1920.webp, ./assets/images/gallery-5-1920@2x.webp 2x">
+                  <img class="gallery__image" src="./assets/images/gallery-5-1920.png" alt="Картинка в галереи">
+                </picture>
+                <a href="#" class="gallery__card-link card-link link-reset">
+                  <button class="btn card-link__btn">
+                    <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <rect x="4.5" y="6.5" width="13" height="13" rx="1.5" stroke="white"/>
+                      <path d="M6.33784 6.63126L6.33784 6.49958C6.33784 5.39501 7.23327 4.49958 8.33784 4.49958L17.5 4.49959C18.6045 4.49959 19.5 5.39502 19.5 6.49959L19.5 15.9382C19.5 16.9853 18.5159 17.7537 17.5 17.4997V17.4997" stroke="white"/>
+                    </svg>
+                  </button>
+                  <span class="card-link__icon">
+                    <svg width="48" height="48" viewbox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M11.2445 14.2998H36.7555C38.2133 14.2998 39.3618 15.542 39.2478 16.9953L37.5851 38.1953C37.4831 39.4962 36.3976 40.4998 35.0927 40.4998H12.9073C11.6024 40.4998 10.5169 39.4962 10.4149 38.1953L8.75216 16.9953C8.63818 15.542 9.78674 14.2998 11.2445 14.2998Z" stroke="white"/>
+                      <path d="M15.004 24.4857C15.004 24.4857 14.5437 7 23.5 7C32.4563 7 31.996 24.4857 31.996 24.4857" stroke="white"/>
+                    </svg>
+                  </span>
+                  Узнай что на мне
+                  <div class="card-link__like-counter">
+                  <span class="card-link__like-icon">
+                    <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M12.4287 7.25725L13.7612 5.03654L17.1965 5.46595L18.5 7.63849V10.3206L12.0145 18.1959L5.93878 10.2507L5.05633 8.04458L6.34555 5.89588L9.35443 4.60636L11.6159 7.32009L12.0665 7.86089L12.4287 7.25725Z" fill="white" stroke="white"/>
+                      <path d="M11.9 7.0948C10.6998 1.47892 1.40879 5.90389 5.76035 11.6018C10.1119 17.2996 12.4 19.4908 12.4 19.4908" stroke="white"/>
+                      <path d="M11.8941 7.0948C13.0943 1.47892 22.7304 5.90389 18.3788 11.6018C14.0273 17.2996 11.7 19.5 11.7 19.5" stroke="white"/>
+                      <path d="M11.391 6.70752L12.4043 6.70757L12.3834 7.24079H11.391V6.70752Z" fill="white"/>
+                    </svg>
+                  </span>
+                    200
+                  </div>
+                </a>
               </li>
             </ul>
           </div>
