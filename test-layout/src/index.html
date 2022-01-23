@@ -53,6 +53,15 @@
               </svg>
             </a>
           </li>
+          <li class="control_item">
+            <button id="borger-open-btn" class="borger-open-btn btn">
+              <svg width="18" height="13" viewbox="0 0 18 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <line y1="0.5" x2="18" y2="0.5" stroke="#333333"/>
+                <line y1="12.5" x2="18" y2="12.5" stroke="#333333"/>
+                <line y1="6.5" x2="18" y2="6.5" stroke="#333333"/>
+              </svg>
+            </button>
+          </li>
         </ul>
       </div>
     </header>
@@ -67,7 +76,7 @@
                     <source media="(min-width: 1025px)" type="image/webp"
                       srcset="./assets/images/left-box-one-1920.webp, ./assets/images/left-box-one-1920@2x.webp 2x">
                     <source media="(max-width: 568px)" type="image/webp"
-                      srcset="./assets/images/left-box-one-1920.webp, ./assets/images/left-box-one-1920@2x.webp 2x">
+                      srcset="./assets/images/left-box-one-320.webp, ./assets/images/left-box-one-320@2x.webp 2x">
                     <img class="left-box__image" src="./assets/images/left-box-one-1920.png" alt="Картинка товара">
                   </picture>
                 </div>
@@ -76,7 +85,7 @@
                     <source media="(min-width: 1025px)" type="image/webp"
                       srcset="./assets/images/left-box-two-1920.webp, ./assets/images/left-box-two-1920@2x.webp 2x">
                     <source media="(max-width: 568px)" type="image/webp"
-                      srcset="./assets/images/left-box-two-1920.webp, ./assets/images/left-box-two-1920@2x.webp 2x">
+                      srcset="./assets/images/left-box-two-320.webp, ./assets/images/left-box-two-320@2x.webp 2x">
                     <img class=" left-box__image" src="./assets/images/left-box-two-1920.png" alt="Картинка товара">
                   </picture>
                 </div>
@@ -85,7 +94,7 @@
                     <source media="(min-width: 1025px)" type="image/webp"
                       srcset="./assets/images/left-box-three-1920.webp, ./assets/images/left-box-three-1920@2x.webp 2x">
                     <source media="(max-width: 568px)" type="image/webp"
-                      srcset="./assets/images/left-box-three-1920.webp, ./assets/images/left-box-three-1920@2x.webp 2x">
+                      srcset="./assets/images/left-box-three-320.webp, ./assets/images/left-box-three-320@2x.webp 2x">
                     <img class="left-box__image" src="./assets/images/left-box-three-1920.png" alt="Картинка товара">
                   </picture>
                 </div>
@@ -94,7 +103,7 @@
                     <source media="(min-width: 1025px)" type="image/webp"
                       srcset="./assets/images/left-box-four-1920.webp, ./assets/images/left-box-four-1920@2x.webp 2x">
                     <source media="(max-width: 568px)" type="image/webp"
-                      srcset="./assets/images/left-box-four-1920.webp, ./assets/images/left-box-four-1920@2x.webp 2x">
+                      srcset="./assets/images/left-box-four-320.webp, ./assets/images/left-box-four-320@2x.webp 2x">
                     <img class="left-box__image" src="./assets/images/left-box-four-1920.png" alt="Картинка товара">
                   </picture>
                 </div>
@@ -103,7 +112,7 @@
                     <source media="(min-width: 1025px)" type="image/webp"
                       srcset="./assets/images/left-box-five-1920.webp, ./assets/images/left-box-five-1920@2x.webp 2x">
                     <source media="(max-width: 568px)" type="image/webp"
-                      srcset="./assets/images/left-box-five-1920.webp, ./assets/images/left-box-five-1920@2x.webp 2x">
+                      srcset="./assets/images/left-box-five-320.webp, ./assets/images/left-box-five-320@2x.webp 2x">
                     <img class="left-box__image" src="./assets/images/left-box-five-1920.png" alt="Картинка товара">
                   </picture>
                 </div>
@@ -230,20 +239,22 @@
                   </span>
                   <button class="counter__btn btn">-</button>
                 </div>
-                <button class="btn card-btns__add">
-                  Добавить в корзину
-                </button>
-                <button class="btn card-btns__chosen">
-                  <svg width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M7.90002 3.0948C6.69981 -2.52108 -2.59119 1.90389 1.76037 7.60175C6.11193 13.2996 8.40002 15.4908 8.40002 15.4908"
-                      stroke="white" />
-                    <path
-                      d="M7.89415 3.0948C9.09435 -2.52108 18.7304 1.90389 14.3789 7.60175C10.0273 13.2996 7.70001 15.5 7.70001 15.5"
-                      stroke="white" />
-                    <path d="M7.39099 2.70752L8.4043 2.70757L8.38337 3.24079H7.39099V2.70752Z" fill="white" />
-                  </svg>
-                </button>
+                <div class="card-btns__add-btns add-btns">
+                  <button class="btn  add-btns__add">
+                    Добавить в корзину
+                  </button>
+                  <button class="btn  add-btns__chosen">
+                    <svg width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M7.90002 3.0948C6.69981 -2.52108 -2.59119 1.90389 1.76037 7.60175C6.11193 13.2996 8.40002 15.4908 8.40002 15.4908"
+                        stroke="white" />
+                      <path
+                        d="M7.89415 3.0948C9.09435 -2.52108 18.7304 1.90389 14.3789 7.60175C10.0273 13.2996 7.70001 15.5 7.70001 15.5"
+                        stroke="white" />
+                      <path d="M7.39099 2.70752L8.4043 2.70757L8.38337 3.24079H7.39099V2.70752Z" fill="white" />
+                    </svg>
+                  </button>
+                </div>
               </div>
               <a href="#" class="product-card__buy-link link-reset link">Купить в 1 клик</a>
               <div class="line"></div>
@@ -294,191 +305,191 @@
               Посмотреть все стили
             </a>
           </div>
-          <div class="gallery">
-            <ul class="gallery__list list-reset">
-              <li class="gallery__card gallery__card_one" aria-label="Галерея">
-                <picture>
-                  <source media="(min-width: 1025px)" type="image/webp"
-                    srcset="./assets/images/gallery-1-1920.webp, ./assets/images//gallery-1-1920@2x.webp 2x">
-                  <source media="(max-width: 568px)" type="image/webp"
-                    srcset="./assets/images/gallery-1-1920.webp, ./assets/images/gallery-1-1920@2x.webp 2x">
-                  <img class="gallery__image gallery__image_bigger" src="./assets/images/gallery-1-1920.png" alt="Картинка в галереи">
-                </picture>
-                <a href="#" class="gallery__card-link card-link link-reset">
-                  <button class="btn card-link__btn">
-                    <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <rect x="4.5" y="6.5" width="13" height="13" rx="1.5" stroke="white"/>
-                      <path d="M6.33784 6.63126L6.33784 6.49958C6.33784 5.39501 7.23327 4.49958 8.33784 4.49958L17.5 4.49959C18.6045 4.49959 19.5 5.39502 19.5 6.49959L19.5 15.9382C19.5 16.9853 18.5159 17.7537 17.5 17.4997V17.4997" stroke="white"/>
-                    </svg>
-                  </button>
-                  <span class="card-link__icon">
-                    <svg width="48" height="48" viewbox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M11.2445 14.2998H36.7555C38.2133 14.2998 39.3618 15.542 39.2478 16.9953L37.5851 38.1953C37.4831 39.4962 36.3976 40.4998 35.0927 40.4998H12.9073C11.6024 40.4998 10.5169 39.4962 10.4149 38.1953L8.75216 16.9953C8.63818 15.542 9.78674 14.2998 11.2445 14.2998Z" stroke="white"/>
-                      <path d="M15.004 24.4857C15.004 24.4857 14.5437 7 23.5 7C32.4563 7 31.996 24.4857 31.996 24.4857" stroke="white"/>
-                    </svg>
-                  </span>
-                  Узнай что на мне
-                  <div class="card-link__like-counter">
-                  <span class="card-link__like-icon">
-                    <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M12.4287 7.25725L13.7612 5.03654L17.1965 5.46595L18.5 7.63849V10.3206L12.0145 18.1959L5.93878 10.2507L5.05633 8.04458L6.34555 5.89588L9.35443 4.60636L11.6159 7.32009L12.0665 7.86089L12.4287 7.25725Z" fill="white" stroke="white"/>
-                      <path d="M11.9 7.0948C10.6998 1.47892 1.40879 5.90389 5.76035 11.6018C10.1119 17.2996 12.4 19.4908 12.4 19.4908" stroke="white"/>
-                      <path d="M11.8941 7.0948C13.0943 1.47892 22.7304 5.90389 18.3788 11.6018C14.0273 17.2996 11.7 19.5 11.7 19.5" stroke="white"/>
-                      <path d="M11.391 6.70752L12.4043 6.70757L12.3834 7.24079H11.391V6.70752Z" fill="white"/>
-                    </svg>
-                  </span>
-                    200
-                  </div>
-                </a>
-              </li>
-              <li class="gallery__card">
-                <picture>
-                  <source media="(min-width: 1025px)" type="image/webp"
-                    srcset="./assets/images/gallery-2-1920.webp, ./assets/images//gallery-2-1920@2x.webp 2x">
-                  <source media="(max-width: 568px)" type="image/webp"
-                    srcset="./assets/images/gallery-2-1920.webp, ./assets/images/gallery-2-1920@2x.webp 2x">
-                  <img class="gallery__image" src="./assets/images/gallery-2-1920.png" alt="Картинка в галереи">
-                </picture>
-                <a href="#" class="gallery__card-link card-link link-reset">
-                  <button class="btn card-link__btn">
-                    <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <rect x="4.5" y="6.5" width="13" height="13" rx="1.5" stroke="white"/>
-                      <path d="M6.33784 6.63126L6.33784 6.49958C6.33784 5.39501 7.23327 4.49958 8.33784 4.49958L17.5 4.49959C18.6045 4.49959 19.5 5.39502 19.5 6.49959L19.5 15.9382C19.5 16.9853 18.5159 17.7537 17.5 17.4997V17.4997" stroke="white"/>
-                    </svg>
-                  </button>
-                  <span class="card-link__icon">
-                    <svg width="48" height="48" viewbox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M11.2445 14.2998H36.7555C38.2133 14.2998 39.3618 15.542 39.2478 16.9953L37.5851 38.1953C37.4831 39.4962 36.3976 40.4998 35.0927 40.4998H12.9073C11.6024 40.4998 10.5169 39.4962 10.4149 38.1953L8.75216 16.9953C8.63818 15.542 9.78674 14.2998 11.2445 14.2998Z" stroke="white"/>
-                      <path d="M15.004 24.4857C15.004 24.4857 14.5437 7 23.5 7C32.4563 7 31.996 24.4857 31.996 24.4857" stroke="white"/>
-                    </svg>
-                  </span>
-                  Узнай что на мне
-                  <div class="card-link__like-counter">
-                  <span class="card-link__like-icon">
-                    <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M12.4287 7.25725L13.7612 5.03654L17.1965 5.46595L18.5 7.63849V10.3206L12.0145 18.1959L5.93878 10.2507L5.05633 8.04458L6.34555 5.89588L9.35443 4.60636L11.6159 7.32009L12.0665 7.86089L12.4287 7.25725Z" fill="white" stroke="white"/>
-                      <path d="M11.9 7.0948C10.6998 1.47892 1.40879 5.90389 5.76035 11.6018C10.1119 17.2996 12.4 19.4908 12.4 19.4908" stroke="white"/>
-                      <path d="M11.8941 7.0948C13.0943 1.47892 22.7304 5.90389 18.3788 11.6018C14.0273 17.2996 11.7 19.5 11.7 19.5" stroke="white"/>
-                      <path d="M11.391 6.70752L12.4043 6.70757L12.3834 7.24079H11.391V6.70752Z" fill="white"/>
-                    </svg>
-                  </span>
-                    200
-                  </div>
-                </a>
-              </li>
-              <li class="gallery__card">
-                <picture>
-                  <source media="(min-width: 1025px)" type="image/webp"
-                    srcset="./assets/images/gallery-4-1920.webp, ./assets/images//gallery-4-1920@2x.webp 2x">
-                  <source media="(max-width: 568px)" type="image/webp"
-                    srcset="./assets/images/gallery-4-1920.webp, ./assets/images/gallery-4-1920@2x.webp 2x">
-                  <img class="gallery__image" src="./assets/images/gallery-4-1920.png" alt="Картинка в галереи">
-                </picture>
-                <a href="#" class="gallery__card-link card-link link-reset">
-                  <button class="btn card-link__btn">
-                    <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <rect x="4.5" y="6.5" width="13" height="13" rx="1.5" stroke="white"/>
-                      <path d="M6.33784 6.63126L6.33784 6.49958C6.33784 5.39501 7.23327 4.49958 8.33784 4.49958L17.5 4.49959C18.6045 4.49959 19.5 5.39502 19.5 6.49959L19.5 15.9382C19.5 16.9853 18.5159 17.7537 17.5 17.4997V17.4997" stroke="white"/>
-                    </svg>
-                  </button>
-                  <span class="card-link__icon">
-                    <svg width="48" height="48" viewbox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M11.2445 14.2998H36.7555C38.2133 14.2998 39.3618 15.542 39.2478 16.9953L37.5851 38.1953C37.4831 39.4962 36.3976 40.4998 35.0927 40.4998H12.9073C11.6024 40.4998 10.5169 39.4962 10.4149 38.1953L8.75216 16.9953C8.63818 15.542 9.78674 14.2998 11.2445 14.2998Z" stroke="white"/>
-                      <path d="M15.004 24.4857C15.004 24.4857 14.5437 7 23.5 7C32.4563 7 31.996 24.4857 31.996 24.4857" stroke="white"/>
-                    </svg>
-                  </span>
-                  Узнай что на мне
-                  <div class="card-link__like-counter">
-                  <span class="card-link__like-icon">
-                    <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M12.4287 7.25725L13.7612 5.03654L17.1965 5.46595L18.5 7.63849V10.3206L12.0145 18.1959L5.93878 10.2507L5.05633 8.04458L6.34555 5.89588L9.35443 4.60636L11.6159 7.32009L12.0665 7.86089L12.4287 7.25725Z" fill="white" stroke="white"/>
-                      <path d="M11.9 7.0948C10.6998 1.47892 1.40879 5.90389 5.76035 11.6018C10.1119 17.2996 12.4 19.4908 12.4 19.4908" stroke="white"/>
-                      <path d="M11.8941 7.0948C13.0943 1.47892 22.7304 5.90389 18.3788 11.6018C14.0273 17.2996 11.7 19.5 11.7 19.5" stroke="white"/>
-                      <path d="M11.391 6.70752L12.4043 6.70757L12.3834 7.24079H11.391V6.70752Z" fill="white"/>
-                    </svg>
-                  </span>
-                    200
-                  </div>
-                </a>
-              </li>
-              <li class="gallery__card">
-                <picture>
-                  <source media="(min-width: 1025px)" type="image/webp"
-                    srcset="./assets/images/gallery-3-1920.webp, ./assets/images//gallery-3-1920@2x.webp 2x">
-                  <source media="(max-width: 568px)" type="image/webp"
-                    srcset="./assets/images/gallery-3-1920.webp, ./assets/images/gallery-3-1920@2x.webp 2x">
-                  <img class="gallery__image" src="./assets/images/gallery-3-1920.png" alt="Картинка в галереи">
-                </picture>
-                <a href="#" class="gallery__card-link card-link link-reset">
-                  <button class="btn card-link__btn">
-                    <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <rect x="4.5" y="6.5" width="13" height="13" rx="1.5" stroke="white"/>
-                      <path d="M6.33784 6.63126L6.33784 6.49958C6.33784 5.39501 7.23327 4.49958 8.33784 4.49958L17.5 4.49959C18.6045 4.49959 19.5 5.39502 19.5 6.49959L19.5 15.9382C19.5 16.9853 18.5159 17.7537 17.5 17.4997V17.4997" stroke="white"/>
-                    </svg>
-                  </button>
-                  <span class="card-link__icon">
-                    <svg width="48" height="48" viewbox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M11.2445 14.2998H36.7555C38.2133 14.2998 39.3618 15.542 39.2478 16.9953L37.5851 38.1953C37.4831 39.4962 36.3976 40.4998 35.0927 40.4998H12.9073C11.6024 40.4998 10.5169 39.4962 10.4149 38.1953L8.75216 16.9953C8.63818 15.542 9.78674 14.2998 11.2445 14.2998Z" stroke="white"/>
-                      <path d="M15.004 24.4857C15.004 24.4857 14.5437 7 23.5 7C32.4563 7 31.996 24.4857 31.996 24.4857" stroke="white"/>
-                    </svg>
-                  </span>
-                  Узнай что на мне
-                  <div class="card-link__like-counter">
-                  <span class="card-link__like-icon">
-                    <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M12.4287 7.25725L13.7612 5.03654L17.1965 5.46595L18.5 7.63849V10.3206L12.0145 18.1959L5.93878 10.2507L5.05633 8.04458L6.34555 5.89588L9.35443 4.60636L11.6159 7.32009L12.0665 7.86089L12.4287 7.25725Z" fill="white" stroke="white"/>
-                      <path d="M11.9 7.0948C10.6998 1.47892 1.40879 5.90389 5.76035 11.6018C10.1119 17.2996 12.4 19.4908 12.4 19.4908" stroke="white"/>
-                      <path d="M11.8941 7.0948C13.0943 1.47892 22.7304 5.90389 18.3788 11.6018C14.0273 17.2996 11.7 19.5 11.7 19.5" stroke="white"/>
-                      <path d="M11.391 6.70752L12.4043 6.70757L12.3834 7.24079H11.391V6.70752Z" fill="white"/>
-                    </svg>
-                  </span>
-                    200
-                  </div>
-                </a>
-              </li>
-              <li class="gallery__card">
-                <picture>
-                  <source media="(min-width: 1025px)" type="image/webp"
-                    srcset="./assets/images/gallery-5-1920.webp, ./assets/images//gallery-5-1920@2x.webp 2x">
-                  <source media="(max-width: 568px)" type="image/webp"
-                    srcset="./assets/images/gallery-5-1920.webp, ./assets/images/gallery-5-1920@2x.webp 2x">
-                  <img class="gallery__image" src="./assets/images/gallery-5-1920.png" alt="Картинка в галереи">
-                </picture>
-                <a href="#" class="gallery__card-link card-link link-reset">
-                  <button class="btn card-link__btn">
-                    <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <rect x="4.5" y="6.5" width="13" height="13" rx="1.5" stroke="white"/>
-                      <path d="M6.33784 6.63126L6.33784 6.49958C6.33784 5.39501 7.23327 4.49958 8.33784 4.49958L17.5 4.49959C18.6045 4.49959 19.5 5.39502 19.5 6.49959L19.5 15.9382C19.5 16.9853 18.5159 17.7537 17.5 17.4997V17.4997" stroke="white"/>
-                    </svg>
-                  </button>
-                  <span class="card-link__icon">
-                    <svg width="48" height="48" viewbox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M11.2445 14.2998H36.7555C38.2133 14.2998 39.3618 15.542 39.2478 16.9953L37.5851 38.1953C37.4831 39.4962 36.3976 40.4998 35.0927 40.4998H12.9073C11.6024 40.4998 10.5169 39.4962 10.4149 38.1953L8.75216 16.9953C8.63818 15.542 9.78674 14.2998 11.2445 14.2998Z" stroke="white"/>
-                      <path d="M15.004 24.4857C15.004 24.4857 14.5437 7 23.5 7C32.4563 7 31.996 24.4857 31.996 24.4857" stroke="white"/>
-                    </svg>
-                  </span>
-                  Узнай что на мне
-                  <div class="card-link__like-counter">
-                  <span class="card-link__like-icon">
-                    <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M12.4287 7.25725L13.7612 5.03654L17.1965 5.46595L18.5 7.63849V10.3206L12.0145 18.1959L5.93878 10.2507L5.05633 8.04458L6.34555 5.89588L9.35443 4.60636L11.6159 7.32009L12.0665 7.86089L12.4287 7.25725Z" fill="white" stroke="white"/>
-                      <path d="M11.9 7.0948C10.6998 1.47892 1.40879 5.90389 5.76035 11.6018C10.1119 17.2996 12.4 19.4908 12.4 19.4908" stroke="white"/>
-                      <path d="M11.8941 7.0948C13.0943 1.47892 22.7304 5.90389 18.3788 11.6018C14.0273 17.2996 11.7 19.5 11.7 19.5" stroke="white"/>
-                      <path d="M11.391 6.70752L12.4043 6.70757L12.3834 7.24079H11.391V6.70752Z" fill="white"/>
-                    </svg>
-                  </span>
-                    200
-                  </div>
-                </a>
-              </li>
-            </ul>
-          </div>
+        </div>
+        <div class="gallery">
+          <ul class="gallery__list list-reset">
+            <li class="gallery__card gallery__card_one" aria-label="Галерея">
+              <picture>
+                <source media="(min-width: 1025px)" type="image/webp"
+                  srcset="./assets/images/gallery-1-1920.webp, ./assets/images//gallery-1-1920@2x.webp 2x">
+                <source media="(max-width: 568px)" type="image/webp"
+                  srcset="./assets/images/gallery-1-320.webp, ./assets/images/gallery-1-320@2x.webp 2x">
+                <img class="gallery__image gallery__image_bigger" src="./assets/images/gallery-1-1920.png" alt="Картинка в галереи">
+              </picture>
+              <a href="#" class="gallery__card-link card-link link-reset">
+                <button class="btn card-link__btn">
+                  <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="4.5" y="6.5" width="13" height="13" rx="1.5" stroke="white"/>
+                    <path d="M6.33784 6.63126L6.33784 6.49958C6.33784 5.39501 7.23327 4.49958 8.33784 4.49958L17.5 4.49959C18.6045 4.49959 19.5 5.39502 19.5 6.49959L19.5 15.9382C19.5 16.9853 18.5159 17.7537 17.5 17.4997V17.4997" stroke="white"/>
+                  </svg>
+                </button>
+                <span class="card-link__icon">
+                  <svg width="48" height="48" viewbox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M11.2445 14.2998H36.7555C38.2133 14.2998 39.3618 15.542 39.2478 16.9953L37.5851 38.1953C37.4831 39.4962 36.3976 40.4998 35.0927 40.4998H12.9073C11.6024 40.4998 10.5169 39.4962 10.4149 38.1953L8.75216 16.9953C8.63818 15.542 9.78674 14.2998 11.2445 14.2998Z" stroke="white"/>
+                    <path d="M15.004 24.4857C15.004 24.4857 14.5437 7 23.5 7C32.4563 7 31.996 24.4857 31.996 24.4857" stroke="white"/>
+                  </svg>
+                </span>
+                Узнай что на мне
+                <div class="card-link__like-counter">
+                <span class="card-link__like-icon">
+                  <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12.4287 7.25725L13.7612 5.03654L17.1965 5.46595L18.5 7.63849V10.3206L12.0145 18.1959L5.93878 10.2507L5.05633 8.04458L6.34555 5.89588L9.35443 4.60636L11.6159 7.32009L12.0665 7.86089L12.4287 7.25725Z" fill="white" stroke="white"/>
+                    <path d="M11.9 7.0948C10.6998 1.47892 1.40879 5.90389 5.76035 11.6018C10.1119 17.2996 12.4 19.4908 12.4 19.4908" stroke="white"/>
+                    <path d="M11.8941 7.0948C13.0943 1.47892 22.7304 5.90389 18.3788 11.6018C14.0273 17.2996 11.7 19.5 11.7 19.5" stroke="white"/>
+                    <path d="M11.391 6.70752L12.4043 6.70757L12.3834 7.24079H11.391V6.70752Z" fill="white"/>
+                  </svg>
+                </span>
+                  200
+                </div>
+              </a>
+            </li>
+            <li class="gallery__card">
+              <picture>
+                <source media="(min-width: 1025px)" type="image/webp"
+                  srcset="./assets/images/gallery-2-1920.webp, ./assets/images//gallery-2-1920@2x.webp 2x">
+                <source media="(max-width: 568px)" type="image/webp"
+                  srcset="./assets/images/gallery-2-320.webp, ./assets/images/gallery-2-320@2x.webp 2x">
+                <img class="gallery__image" src="./assets/images/gallery-2-1920.png" alt="Картинка в галереи">
+              </picture>
+              <a href="#" class="gallery__card-link card-link link-reset">
+                <button class="btn card-link__btn">
+                  <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="4.5" y="6.5" width="13" height="13" rx="1.5" stroke="white"/>
+                    <path d="M6.33784 6.63126L6.33784 6.49958C6.33784 5.39501 7.23327 4.49958 8.33784 4.49958L17.5 4.49959C18.6045 4.49959 19.5 5.39502 19.5 6.49959L19.5 15.9382C19.5 16.9853 18.5159 17.7537 17.5 17.4997V17.4997" stroke="white"/>
+                  </svg>
+                </button>
+                <span class="card-link__icon">
+                  <svg width="48" height="48" viewbox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M11.2445 14.2998H36.7555C38.2133 14.2998 39.3618 15.542 39.2478 16.9953L37.5851 38.1953C37.4831 39.4962 36.3976 40.4998 35.0927 40.4998H12.9073C11.6024 40.4998 10.5169 39.4962 10.4149 38.1953L8.75216 16.9953C8.63818 15.542 9.78674 14.2998 11.2445 14.2998Z" stroke="white"/>
+                    <path d="M15.004 24.4857C15.004 24.4857 14.5437 7 23.5 7C32.4563 7 31.996 24.4857 31.996 24.4857" stroke="white"/>
+                  </svg>
+                </span>
+                Узнай что на мне
+                <div class="card-link__like-counter">
+                <span class="card-link__like-icon">
+                  <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12.4287 7.25725L13.7612 5.03654L17.1965 5.46595L18.5 7.63849V10.3206L12.0145 18.1959L5.93878 10.2507L5.05633 8.04458L6.34555 5.89588L9.35443 4.60636L11.6159 7.32009L12.0665 7.86089L12.4287 7.25725Z" fill="white" stroke="white"/>
+                    <path d="M11.9 7.0948C10.6998 1.47892 1.40879 5.90389 5.76035 11.6018C10.1119 17.2996 12.4 19.4908 12.4 19.4908" stroke="white"/>
+                    <path d="M11.8941 7.0948C13.0943 1.47892 22.7304 5.90389 18.3788 11.6018C14.0273 17.2996 11.7 19.5 11.7 19.5" stroke="white"/>
+                    <path d="M11.391 6.70752L12.4043 6.70757L12.3834 7.24079H11.391V6.70752Z" fill="white"/>
+                  </svg>
+                </span>
+                  200
+                </div>
+              </a>
+            </li>
+            <li class="gallery__card">
+              <picture>
+                <source media="(min-width: 1025px)" type="image/webp"
+                  srcset="./assets/images/gallery-4-1920.webp, ./assets/images//gallery-4-1920@2x.webp 2x">
+                <source media="(max-width: 568px)" type="image/webp"
+                  srcset="./assets/images/gallery-4-320.webp, ./assets/images/gallery-4-320@2x.webp 2x">
+                <img class="gallery__image" src="./assets/images/gallery-4-1920.png" alt="Картинка в галереи">
+              </picture>
+              <a href="#" class="gallery__card-link card-link link-reset">
+                <button class="btn card-link__btn">
+                  <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="4.5" y="6.5" width="13" height="13" rx="1.5" stroke="white"/>
+                    <path d="M6.33784 6.63126L6.33784 6.49958C6.33784 5.39501 7.23327 4.49958 8.33784 4.49958L17.5 4.49959C18.6045 4.49959 19.5 5.39502 19.5 6.49959L19.5 15.9382C19.5 16.9853 18.5159 17.7537 17.5 17.4997V17.4997" stroke="white"/>
+                  </svg>
+                </button>
+                <span class="card-link__icon">
+                  <svg width="48" height="48" viewbox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M11.2445 14.2998H36.7555C38.2133 14.2998 39.3618 15.542 39.2478 16.9953L37.5851 38.1953C37.4831 39.4962 36.3976 40.4998 35.0927 40.4998H12.9073C11.6024 40.4998 10.5169 39.4962 10.4149 38.1953L8.75216 16.9953C8.63818 15.542 9.78674 14.2998 11.2445 14.2998Z" stroke="white"/>
+                    <path d="M15.004 24.4857C15.004 24.4857 14.5437 7 23.5 7C32.4563 7 31.996 24.4857 31.996 24.4857" stroke="white"/>
+                  </svg>
+                </span>
+                Узнай что на мне
+                <div class="card-link__like-counter">
+                <span class="card-link__like-icon">
+                  <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12.4287 7.25725L13.7612 5.03654L17.1965 5.46595L18.5 7.63849V10.3206L12.0145 18.1959L5.93878 10.2507L5.05633 8.04458L6.34555 5.89588L9.35443 4.60636L11.6159 7.32009L12.0665 7.86089L12.4287 7.25725Z" fill="white" stroke="white"/>
+                    <path d="M11.9 7.0948C10.6998 1.47892 1.40879 5.90389 5.76035 11.6018C10.1119 17.2996 12.4 19.4908 12.4 19.4908" stroke="white"/>
+                    <path d="M11.8941 7.0948C13.0943 1.47892 22.7304 5.90389 18.3788 11.6018C14.0273 17.2996 11.7 19.5 11.7 19.5" stroke="white"/>
+                    <path d="M11.391 6.70752L12.4043 6.70757L12.3834 7.24079H11.391V6.70752Z" fill="white"/>
+                  </svg>
+                </span>
+                  200
+                </div>
+              </a>
+            </li>
+            <li class="gallery__card">
+              <picture>
+                <source media="(min-width: 1025px)" type="image/webp"
+                  srcset="./assets/images/gallery-3-1920.webp, ./assets/images//gallery-3-1920@2x.webp 2x">
+                <source media="(max-width: 568px)" type="image/webp"
+                  srcset="./assets/images/gallery-3-320.webp, ./assets/images/gallery-3-320@2x.webp 2x">
+                <img class="gallery__image" src="./assets/images/gallery-3-1920.png" alt="Картинка в галереи">
+              </picture>
+              <a href="#" class="gallery__card-link card-link link-reset">
+                <button class="btn card-link__btn">
+                  <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="4.5" y="6.5" width="13" height="13" rx="1.5" stroke="white"/>
+                    <path d="M6.33784 6.63126L6.33784 6.49958C6.33784 5.39501 7.23327 4.49958 8.33784 4.49958L17.5 4.49959C18.6045 4.49959 19.5 5.39502 19.5 6.49959L19.5 15.9382C19.5 16.9853 18.5159 17.7537 17.5 17.4997V17.4997" stroke="white"/>
+                  </svg>
+                </button>
+                <span class="card-link__icon">
+                  <svg width="48" height="48" viewbox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M11.2445 14.2998H36.7555C38.2133 14.2998 39.3618 15.542 39.2478 16.9953L37.5851 38.1953C37.4831 39.4962 36.3976 40.4998 35.0927 40.4998H12.9073C11.6024 40.4998 10.5169 39.4962 10.4149 38.1953L8.75216 16.9953C8.63818 15.542 9.78674 14.2998 11.2445 14.2998Z" stroke="white"/>
+                    <path d="M15.004 24.4857C15.004 24.4857 14.5437 7 23.5 7C32.4563 7 31.996 24.4857 31.996 24.4857" stroke="white"/>
+                  </svg>
+                </span>
+                Узнай что на мне
+                <div class="card-link__like-counter">
+                <span class="card-link__like-icon">
+                  <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12.4287 7.25725L13.7612 5.03654L17.1965 5.46595L18.5 7.63849V10.3206L12.0145 18.1959L5.93878 10.2507L5.05633 8.04458L6.34555 5.89588L9.35443 4.60636L11.6159 7.32009L12.0665 7.86089L12.4287 7.25725Z" fill="white" stroke="white"/>
+                    <path d="M11.9 7.0948C10.6998 1.47892 1.40879 5.90389 5.76035 11.6018C10.1119 17.2996 12.4 19.4908 12.4 19.4908" stroke="white"/>
+                    <path d="M11.8941 7.0948C13.0943 1.47892 22.7304 5.90389 18.3788 11.6018C14.0273 17.2996 11.7 19.5 11.7 19.5" stroke="white"/>
+                    <path d="M11.391 6.70752L12.4043 6.70757L12.3834 7.24079H11.391V6.70752Z" fill="white"/>
+                  </svg>
+                </span>
+                  200
+                </div>
+              </a>
+            </li>
+            <li class="gallery__card">
+              <picture>
+                <source media="(min-width: 1025px)" type="image/webp"
+                  srcset="./assets/images/gallery-5-1920.webp, ./assets/images//gallery-5-1920@2x.webp 2x">
+                <source media="(max-width: 568px)" type="image/webp"
+                  srcset="./assets/images/gallery-5-320.webp, ./assets/images/gallery-5-320@2x.webp 2x">
+                <img class="gallery__image" src="./assets/images/gallery-5-1920.png" alt="Картинка в галереи">
+              </picture>
+              <a href="#" class="gallery__card-link card-link link-reset">
+                <button class="btn card-link__btn">
+                  <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="4.5" y="6.5" width="13" height="13" rx="1.5" stroke="white"/>
+                    <path d="M6.33784 6.63126L6.33784 6.49958C6.33784 5.39501 7.23327 4.49958 8.33784 4.49958L17.5 4.49959C18.6045 4.49959 19.5 5.39502 19.5 6.49959L19.5 15.9382C19.5 16.9853 18.5159 17.7537 17.5 17.4997V17.4997" stroke="white"/>
+                  </svg>
+                </button>
+                <span class="card-link__icon">
+                  <svg width="48" height="48" viewbox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M11.2445 14.2998H36.7555C38.2133 14.2998 39.3618 15.542 39.2478 16.9953L37.5851 38.1953C37.4831 39.4962 36.3976 40.4998 35.0927 40.4998H12.9073C11.6024 40.4998 10.5169 39.4962 10.4149 38.1953L8.75216 16.9953C8.63818 15.542 9.78674 14.2998 11.2445 14.2998Z" stroke="white"/>
+                    <path d="M15.004 24.4857C15.004 24.4857 14.5437 7 23.5 7C32.4563 7 31.996 24.4857 31.996 24.4857" stroke="white"/>
+                  </svg>
+                </span>
+                Узнай что на мне
+                <div class="card-link__like-counter">
+                <span class="card-link__like-icon">
+                  <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12.4287 7.25725L13.7612 5.03654L17.1965 5.46595L18.5 7.63849V10.3206L12.0145 18.1959L5.93878 10.2507L5.05633 8.04458L6.34555 5.89588L9.35443 4.60636L11.6159 7.32009L12.0665 7.86089L12.4287 7.25725Z" fill="white" stroke="white"/>
+                    <path d="M11.9 7.0948C10.6998 1.47892 1.40879 5.90389 5.76035 11.6018C10.1119 17.2996 12.4 19.4908 12.4 19.4908" stroke="white"/>
+                    <path d="M11.8941 7.0948C13.0943 1.47892 22.7304 5.90389 18.3788 11.6018C14.0273 17.2996 11.7 19.5 11.7 19.5" stroke="white"/>
+                    <path d="M11.391 6.70752L12.4043 6.70757L12.3834 7.24079H11.391V6.70752Z" fill="white"/>
+                  </svg>
+                </span>
+                  200
+                </div>
+              </a>
+            </li>
+          </ul>
         </div>
       </section>
       <footer class="footer">
         <div class="container footer__container">
           <div class="footer-links">
-            <h2 class="footer-links title">ПОКУПАТЕЛЯМ</h2>
+            <h2 class="footer-links__title title">Покупателям</h2>
             <ul class="footer-links__list list-reset">
               <li class="footer-links__item">
                 <a href="#" class="footer-links__link link-reset link">Каталог</a>
@@ -492,7 +503,7 @@
             </ul>
           </div>
           <div class="footer-links">
-            <h2 class="footer-links title">О НАС</h2>
+            <h2 class="footer-links__title title">О нас</h2>
             <ul class="footer-links__list list-reset">
               <li class="footer-links__item">
                 <a href="#" class="footer-links__link link-reset link">О компании</a>
@@ -507,7 +518,7 @@
           </div>
           <div class="sub-form">
             <form action="" class="sub-form__form">
-              <label for="sub-input" class="sub-form__label">УЗНАЙТЕ ПЕРВЫМИ О НОВИНКАХ И АКЦИЯХ</label>
+              <label for="sub-input" class="sub-form__label">Узнайте первыми о новинках и акциях</label>
               <input id="sub-input" type="email" class="sub-form__input" placeholder="Адрес электронной почты">
               <button class="sub-form__btn btn">
                 Подписаться

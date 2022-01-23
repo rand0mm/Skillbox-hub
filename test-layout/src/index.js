@@ -16,6 +16,12 @@ const swiper = new Swiper('.left-box__slider', {
       el: '.left-box__mini-image-slider',
       slidesPerView: 5,
       spaceBetween: 7,
+      breakpoints: {
+
+        320: {
+          spaceBetween: 4,
+        },
+      },
     },
   },
 });
