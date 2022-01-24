@@ -26,7 +26,7 @@ module.exports = (env) => ({
         test: /\.(jpe?g|png|gif|svg|webp)$/i,
         type: 'asset/resource',
         generator: {
-          filename: 'img/[name][ext][query]',
+          filename: 'img/[hash][ext][query]',
         },
       },
       {
@@ -62,7 +62,7 @@ module.exports = (env) => ({
       template: './src/index.html',
     }),
     new MiniCssExtractPlugin({
-      filename: 'css/main.[contenthash].css',
+      filename: 'main.[contenthash].css',
     }),
     new webpack.ProvidePlugin({
       $: 'jquery',

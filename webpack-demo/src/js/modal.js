@@ -51,7 +51,7 @@ function modal() {
     }, timeout);
   }
 
-  function modalOpen(curentModal, modalNumb) {
+  function modalOpen(curentModal) {
     if (curentModal && unlock) {
       const modalActive = document.querySelector('.modal_open');
       if (modalActive) {
@@ -60,13 +60,6 @@ function modal() {
         bodyLock();
       }
       setTimeout(() => {
-        const modalImgContent = curentModal.querySelector('.modal__pict');
-        modalImgContent.innerHTML = `
-            <source srcset="/img/gallery-m-${modalNumb === 1 ? modalNumb : 1}-sm.webp" media="(max-width: 590px)">
-            <source srcset="/img/gallery-m-${modalNumb === 1 ? modalNumb : 1}-md.webp" media="(max-width: 768px)">
-            <source srcset="/img/gallery-m-${modalNumb === 1 ? modalNumb : 1}-lg.webp" media="(max-width: 1440px)">
-            <img src="/img/gallery-m-${modalNumb === 1 ? modalNumb : 1}.webp" alt="Картина Художника">
-        `;
         curentModal.classList.add('modal_open');
       }, 100);
       curentModal.classList.add('modal_display');
@@ -84,9 +77,7 @@ function modal() {
       modalObj.addEventListener('click', (e) => {
         const modalName = modalObj.getAttribute('href').replace('#', '');
         const curentModal = document.getElementById(modalName);
-        const modalImg = e.target.querySelector('.gallery-content__pict');
-        const modalNumb = modalImg.querySelector('.gallery-content__img').src.replace(/[^0-9]/g, '').replace(/^.{4}/, '');
-        modalOpen(curentModal, modalNumb);
+        modalOpen(curentModal);
         e.preventDefault();
       });
     }
