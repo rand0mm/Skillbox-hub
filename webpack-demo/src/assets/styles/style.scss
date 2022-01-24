@@ -176,19 +176,15 @@ body.lock {
   transform: scale(0.3);
   transition: opacity .8s ease, transform .8s ease;
 }
-
-.modal__pict-box {
-  width: 400px;
-  height: 500px;
-}
-
 .modal__pict {
   font-size: 0;
 }
 
 .modal__pict img {
+  display: block;
   object-fit: cover;
-  max-width: 100%;
+  width: 400px;
+  height: 500px;
 }
 
 .modal__card {

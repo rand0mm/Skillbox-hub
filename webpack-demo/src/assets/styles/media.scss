@@ -31,6 +31,12 @@
     font-size: 16px;
   }
 
+  .modal__pict img {
+    object-fit: cover;
+    width: 264px;
+    height: 594px;
+  }
+
   .gallery__column {
     height: 725px;
   }
@@ -2096,5 +2102,10 @@
   .gallery-content__pict img {
     height: 367px;
   }
+  .modal__pict img {
+    height: 200px;
+    width: 301px;
+  }
+
 
 }
