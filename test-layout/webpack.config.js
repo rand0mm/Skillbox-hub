@@ -10,6 +10,7 @@ module.exports = (env) => ({
     filename: 'js/main.[contenthash].js',
     publicPath: env.prod ? './' : '/',
   },
+  devtool: 'source-map',
   module: {
     rules: [
       {
@@ -62,7 +63,7 @@ module.exports = (env) => ({
       template: './src/index.html',
     }),
     new MiniCssExtractPlugin({
-      filename: 'css/main.[contenthash].css',
+      filename: 'main.[contenthash].css',
     }),
     new webpack.ProvidePlugin({
       $: 'jquery',

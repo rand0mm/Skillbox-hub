@@ -10,6 +10,7 @@ module.exports = (env) => ({
     filename: 'js/main.[contenthash].js',
     publicPath: env.prod ? './' : '/',
   },
+  devtool: 'source-map',
   module: {
     rules: [
       {
