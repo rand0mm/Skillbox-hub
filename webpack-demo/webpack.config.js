@@ -27,7 +27,7 @@ module.exports = (env) => ({
         test: /\.(jpe?g|png|gif|svg|webp)$/i,
         type: 'asset/resource',
         generator: {
-          filename: 'img/[hash][ext][query]',
+          filename: 'img/[name][ext][query]',
         },
       },
       {
