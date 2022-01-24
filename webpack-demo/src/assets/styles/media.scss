@@ -597,8 +597,8 @@
     max-width: 88.52%;
   }
 
-  .proj__slider-link-pict {
-    transform: scale(0.85);
+  .proj__slider-link {
+    padding: 0 10px;
   }
 
   .contacts-container {
@@ -708,6 +708,9 @@
     margin-left: 0;
     width: 100%;
   }
+  .ui-accordion .ui-accordion-content {
+    overflow: initial;
+  }
 
   .filter-interval {
     margin-bottom: 49px;
@@ -740,6 +743,13 @@
 
   .accordion__content {
     overflow: hidden;
+  }
+
+  .painter-list {
+    align-items: center;
+    flex-wrap: nowrap;
+    height: initial;
+    width: 100%;
   }
 
 }

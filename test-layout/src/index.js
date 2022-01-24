@@ -4,6 +4,7 @@ import Choices from 'choices.js';
 
 Swiper.use([EffectFade, Thumbs]);
 
+// eslint-disable-next-line no-unused-vars
 const swiper = new Swiper('.left-box__slider', {
   fadeEffect: {
     crossFade: true,
@@ -26,6 +27,7 @@ const swiper = new Swiper('.left-box__slider', {
   },
 });
 const choicesElement = document.querySelector('.choices');
+// eslint-disable-next-line no-unused-vars
 const choices = new Choices(choicesElement, {
   silent: true,
   searchEnabled: false,

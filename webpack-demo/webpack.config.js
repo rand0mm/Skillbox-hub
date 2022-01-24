@@ -6,7 +6,8 @@ const webpack = require('webpack');
 module.exports = (env) => ({
   entry: './src/index.js',
   output: {
-    filename: 'main.[contenthash].js',
+    path: `${__dirname}/dist/`,
+    filename: 'js/main.[contenthash].js',
     publicPath: env.prod ? './' : '/',
   },
   module: {
@@ -24,15 +25,23 @@ module.exports = (env) => ({
       {
         test: /\.(jpe?g|png|gif|svg|webp)$/i,
         type: 'asset/resource',
+        generator: {
+          filename: 'img/[name][ext][query]',
+        },
       },
       {
         test: /\.(woff|woff2)$/i,
         type: 'asset/resource',
+        generator: {
+          filename: 'fonts/[hash][ext][query]',
+        },
       },
       {
         test: /\.scss|css$/i,
         use: [
-          env.prod ? MiniCssExtractPlugin.loader : 'style-loader',
+          env.prod ? {
+            loader: MiniCssExtractPlugin.loader,
+          } : 'style-loader',
           'css-loader',
           'sass-loader',
         ],
@@ -53,7 +62,7 @@ module.exports = (env) => ({
       template: './src/index.html',
     }),
     new MiniCssExtractPlugin({
-      filename: 'main.[contenthash].css',
+      filename: 'css/main.[contenthash].css',
     }),
     new webpack.ProvidePlugin({
       $: 'jquery',
