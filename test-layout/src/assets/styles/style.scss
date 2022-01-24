@@ -739,8 +739,10 @@ body.lock {
 .card-btns {
   display: flex;
   margin-bottom: 12px;
-  @media (max-width:568px) {
+  @media (max-width: 992px) {
     flex-direction: column;
+  }
+  @media (max-width:568px) {
     margin-bottom: 21px;
   }
   &__add {
@@ -748,7 +750,7 @@ body.lock {
   }
   &__counter {
     margin-right: 12px;
-    @media (max-width: 590px) {
+    @media (max-width: 992px) {
       margin-bottom: 15px;
     }
   }
@@ -834,6 +836,10 @@ body.lock {
     align-items: flex-start;
     width: 315px;
     margin-bottom: 39px;
+    @media (max-width: 992px) {
+      width: 100%;
+      max-width: 315px;
+    }
   }
 }
 
@@ -1093,5 +1099,31 @@ body.lock {
   &__link {
     text-decoration: initial;
   }
-
+}
+.burger {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 80px 20px 30px 30px;
+  background-color: white;
+  z-index: 10;
+  &__list {
+    display: flex;
+    flex-direction: column;
+  }
+  &__item {
+    margin-bottom: 30px;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+  &__close {
+    position: absolute;
+    min-height: 24px;
+    min-width: 24px;
+    top: 18px;
+    right: 20px;
+  }
 }

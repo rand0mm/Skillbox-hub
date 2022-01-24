@@ -1,6 +1,7 @@
 import './main.scss';
 import Swiper, { EffectFade, Thumbs } from 'swiper';
 import Choices from 'choices.js';
+import counter from './js/counter';
 
 Swiper.use([EffectFade, Thumbs]);
 
@@ -35,3 +36,4 @@ const choices = new Choices(choicesElement, {
   shouldSort: false,
   itemSelectText: '',
 });
+counter();
