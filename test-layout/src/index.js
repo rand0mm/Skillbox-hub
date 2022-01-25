@@ -2,7 +2,9 @@ import './main.scss';
 import Swiper, { EffectFade, Thumbs } from 'swiper';
 import Choices from 'choices.js';
 import counter from './js/counter';
-
+import burger from './js/burger';
+import form from './js/form';
+import addBtns from './js/addbtns';
 Swiper.use([EffectFade, Thumbs]);
 
 // eslint-disable-next-line no-unused-vars
@@ -36,4 +38,8 @@ const choices = new Choices(choicesElement, {
   shouldSort: false,
   itemSelectText: '',
 });
+
 counter();
+burger();
+form();
+addBtns();
