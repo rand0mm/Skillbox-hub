@@ -5,6 +5,7 @@ import counter from './js/counter';
 import burger from './js/burger';
 import form from './js/form';
 import addBtns from './js/addbtns';
+
 Swiper.use([EffectFade, Thumbs]);
 
 // eslint-disable-next-line no-unused-vars

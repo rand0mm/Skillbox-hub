@@ -31,6 +31,8 @@
   --black-color: #000;
   --grey-color: #828282;
   --time-anim: .3s ease;
+  --white-color: #fff;
+
 }
 
 * {
@@ -39,6 +41,7 @@
 }
 
 body {
+  position: relative;
   font-family: 'Open Sans', sans-serif;
   background-color: white;
 }
@@ -102,7 +105,10 @@ input[type="search"]::-webkit-search-results-decoration {
 body.lock {
   overflow: hidden;
 }
-
+.wrapper {
+  overflow: hidden;
+  min-height: 100%;
+}
 
 .modal {
   display: none;
@@ -118,14 +124,6 @@ body.lock {
   z-index: 1;
   background-color: rgba(0, 0, 0, 0.6);
   transition: opacity .8s ease, visibility .8s ease;
-}
-
-.wrapper {
-  overflow: hidden;
-  min-height: 100%;
-}
-
-.modal {
   &_open {
     opacity: 1;
     visibility: visible;
@@ -150,22 +148,13 @@ body.lock {
     transform: scale(0.3);
     transition: opacity .8s ease, transform .8s ease;
   }
-  &_pict-box {
-    width: 400px;
-    height: 500px;
-  }
-  &__pict {
-    font-size: 0;
-  }
-  &__pict img {
-    object-fit: cover;
-    max-width: 100%;
-  }
   &__card {
     position: relative;
-    padding: 121px 50px;
-    width: 500px;
-    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 20px;
+    max-width: 400px;
   }
   &__close {
     position: absolute;
@@ -214,8 +203,12 @@ body.lock {
 /* header */
 
 .header {
+  position: sticky;
+  top: 0;
   margin-bottom: 26px;
+  background-color: var(--white-color);
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 10;
   @media (max-width: 590px) {
     box-shadow: none;
   }
@@ -1033,6 +1026,7 @@ body.lock {
     margin-bottom: 35px;
     border: none;
     border-bottom: 1px solid var(--grey-color);
+    transition: border-color var(--time-anim);
     @media (max-width: 590px) {
       padding: 13px 15.5px;
       margin-bottom: 24px;
@@ -1042,6 +1036,21 @@ body.lock {
       line-height: 20px;
       letter-spacing: 0.04em
     }
+  }
+  &__input::placeholder {
+    transition: color var(--time-anim);
+  }
+  &__input.error {
+    border-color: red;
+  }
+  &__input.error::placeholder {
+    color: red;
+  }
+  &__input.send {
+    border-color: var(--amethyst-color);
+  }
+  &__input.send::placeholder {
+    color: var(--amethyst-color);
   }
   &__btn {
     display: inline-flex;
@@ -1102,12 +1111,16 @@ body.lock {
 }
 .burger {
   position: fixed;
+  display: none;
   top: 0;
   left: 0;
   right: 0;
   padding: 80px 20px 30px 30px;
   background-color: white;
   z-index: 10;
+  transform: translateX(+101%);
+  opacity: 0;
+  transition: transform .6s ease, opacity .6s ease;
   &__list {
     display: flex;
     flex-direction: column;
@@ -1119,11 +1132,59 @@ body.lock {
     letter-spacing: 0.04em;
     text-transform: uppercase;
   }
+  &__link {
+    text-decoration: none;
+  }
   &__close {
     position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     min-height: 24px;
     min-width: 24px;
     top: 18px;
     right: 20px;
+    outline: none;
+    &::before {
+      content: "";
+      position: absolute;
+      border-radius: 50%;
+      opacity: 0;
+      transition: opacity var(--time-anim);
+      top: -4px;
+      right: -4px;
+      bottom: -4px;
+      left: -4px;
+      z-index: -1;
+      background-color: var(--amethyst-color);
+    }
+    &:hover::before {
+      opacity: 1;
+    }
+    &:focus-visible::before {
+      opacity: 1;
+    }
+    &:focus-visible .burger-close-line {
+      stroke: white;
+    }
+
+    &:active {
+      opacity: .6;
+    }
+    &:active .burger-close-line {
+      stroke: white;
+    }
   }
+}
+
+.burger.is-open {
+  display: block;
+}
+
+.burger.anim {
+  transform: none;
+  opacity: 1;
+}
+.burger-close-line {
+  transition: stroke var(--time-anim);
 }

@@ -9,76 +9,92 @@
 </head>
 
 <body>
-  <div class="wrapper">
-    <header class="header lock-padding">
-      <div class="container header__container flex">
-        <a href="#index.html" class="link-reset logo header__logo" aria-label="">
-          <img class="logo__icon" src="./assets/images/logo.svg" alt="Логотип">
-        </a>
-        <ul class="list-reset control" aria-label="Панель управления">
-          <li class="control__item">
-            <a aria-label="Личный кабинет" href="#" class="link-reset flex  control-link">
-              <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle class="control-link__icon" cx="12.4595" cy="8.18919" r="3.68919" stroke="#333333" />
-                <path class="control-link__icon" d="M4.5 19.3379H19.5" stroke="#333333" />
-                <path class="control-link__icon"
-                  d="M4.5 19.84C4.5 16.4347 8.84699 13.9134 12.2143 14.0023C15.4328 14.0872 19.5 16.4347 19.5 19.84"
-                  stroke="#333333" />
-              </svg>
-            </a>
-          </li>
-          <li class="control__item">
-            <a aria-label="Избранное" href="#" class="link-reset flex  control-link">
-              <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path class="control-link__icon"
-                  d="M11.8999 7.0948C10.6997 1.47892 1.40869 5.90389 5.76025 11.6018C10.1118 17.2996 12.3999 19.4908 12.3999 19.4908"
-                  stroke="#333333" />
-                <path class="control-link__icon"
-                  d="M11.8941 7.0948C13.0943 1.47892 22.7304 5.90389 18.3788 11.6018C14.0272 17.2996 11.7 19.5 11.7 19.5"
-                  stroke="#333333" />
-                <path class="control-link__icon" d="M11.391 6.70752L12.4043 6.70757L12.3834 7.24079H11.391V6.70752Z"
-                  fill="#333333" />
-              </svg>
-            </a>
-          </li>
-          <li class="control__item">
-            <a aria-label="Корзина" href="#" class="link-reset flex control-link">
-              <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path class="control-link__icon"
-                  d="M7.74689 7.86865H16.2531C17.7116 7.86865 18.8604 9.11201 18.7453 10.566L18.2203 17.1975C18.1174 18.4977 17.0323 19.5002 15.7281 19.5002H8.27189C6.96769 19.5002 5.88261 18.4977 5.77968 17.1975L5.25468 10.5659C5.13958 9.11201 6.2884 7.86865 7.74689 7.86865Z"
-                  stroke="#333333" />
-                <path class="control-link__icon"
-                  d="M8.00005 12.5C8.00005 12.5 7.78335 4 12.0001 4C16.2168 4 16.0001 12.5 16.0001 12.5"
-                  stroke="#333333" />
-              </svg>
-            </a>
-          </li>
-          <li class="control_item">
-            <button id="burger-open-btn" class="burger-open-btn btn">
-              <svg  width="18" height="13" viewbox="0 0 18 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <line class="burger-open-btn__icon" y1="0.5" x2="18" y2="0.5" stroke="#333333"/>
-                <line class="burger-open-btn__icon" y1="12.5" x2="18" y2="12.5" stroke="#333333"/>
-                <line class="burger-open-btn__icon" y1="6.5" x2="18" y2="6.5" stroke="#333333"/>
-              </svg>
-            </button>
-          </li>
-        </ul>
-        <div class="burger">
-          <button class="btn burger__close">
+  <header class="header">
+    <div class="container header__container flex">
+      <a href="#index.html" class="link-reset logo header__logo" aria-label="">
+        <img class="logo__icon" src="./assets/images/logo.svg" alt="Логотип">
+      </a>
+      <ul class="list-reset control" aria-label="Панель управления">
+        <li class="control__item">
+          <a aria-label="Личный кабинет" href="#" class="link-reset flex  control-link">
             <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <line x1="5.01046" y1="18.2822" x2="18.6464" y2="4.6462" stroke="#333333"/>
-              <line y1="-0.5" x2="19.2842" y2="-0.5" transform="matrix(-0.707107 -0.707107 -0.707107 0.707107 19 18.6357)" stroke="#333333"/>
+              <circle class="control-link__icon" cx="12.4595" cy="8.18919" r="3.68919" stroke="#333333" />
+              <path class="control-link__icon" d="M4.5 19.3379H19.5" stroke="#333333" />
+              <path class="control-link__icon"
+                d="M4.5 19.84C4.5 16.4347 8.84699 13.9134 12.2143 14.0023C15.4328 14.0872 19.5 16.4347 19.5 19.84"
+                stroke="#333333" />
+            </svg>
+          </a>
+        </li>
+        <li class="control__item">
+          <a aria-label="Избранное" href="#" class="link-reset flex  control-link">
+            <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path class="control-link__icon"
+                d="M11.8999 7.0948C10.6997 1.47892 1.40869 5.90389 5.76025 11.6018C10.1118 17.2996 12.3999 19.4908 12.3999 19.4908"
+                stroke="#333333" />
+              <path class="control-link__icon"
+                d="M11.8941 7.0948C13.0943 1.47892 22.7304 5.90389 18.3788 11.6018C14.0272 17.2996 11.7 19.5 11.7 19.5"
+                stroke="#333333" />
+              <path class="control-link__icon" d="M11.391 6.70752L12.4043 6.70757L12.3834 7.24079H11.391V6.70752Z"
+                fill="#333333" />
+            </svg>
+          </a>
+        </li>
+        <li class="control__item">
+          <a aria-label="Корзина" href="#" class="link-reset flex control-link">
+            <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path class="control-link__icon"
+                d="M7.74689 7.86865H16.2531C17.7116 7.86865 18.8604 9.11201 18.7453 10.566L18.2203 17.1975C18.1174 18.4977 17.0323 19.5002 15.7281 19.5002H8.27189C6.96769 19.5002 5.88261 18.4977 5.77968 17.1975L5.25468 10.5659C5.13958 9.11201 6.2884 7.86865 7.74689 7.86865Z"
+                stroke="#333333" />
+              <path class="control-link__icon"
+                d="M8.00005 12.5C8.00005 12.5 7.78335 4 12.0001 4C16.2168 4 16.0001 12.5 16.0001 12.5"
+                stroke="#333333" />
+            </svg>
+          </a>
+        </li>
+        <li class="control_item">
+          <button id="burger-open-btn" class="burger-open-btn btn">
+            <svg  width="18" height="13" viewbox="0 0 18 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <line class="burger-open-btn__icon" y1="0.5" x2="18" y2="0.5" stroke="#333333"/>
+              <line class="burger-open-btn__icon" y1="12.5" x2="18" y2="12.5" stroke="#333333"/>
+              <line class="burger-open-btn__icon" y1="6.5" x2="18" y2="6.5" stroke="#333333"/>
             </svg>
           </button>
-          <ul class="burger__list list-reset">
-            <li class="burger__item">постельное белье</li>
-            <li class="burger__item">одежда для дома</li>
-            <li class="burger__item">Одежда для улицы</li>
-            <li class="burger__item">ВЫход</li>
-          </ul>
-        </div>
+        </li>
+      </ul>
+      <div class="burger">
+        <button class="btn burger__close">
+          <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <line class="burger-close-line" x1="5.01046" y1="18.2822" x2="18.6464" y2="4.6462" stroke="#333333"/>
+            <line class="burger-close-line" y1="-0.5" x2="19.2842" y2="-0.5" transform="matrix(-0.707107 -0.707107 -0.707107 0.707107 19 18.6357)" stroke="#333333"/>
+          </svg>
+        </button>
+        <ul class="burger__list list-reset">
+          <li class="burger__item">
+            <a href="#" class="burger__link link link-reset">
+              постельное белье
+            </a>
+          </li>
+          <li class="burger__item">
+            <a href="#" class="burger__link link link-reset">
+              одежда для дома
+            </a>
+          </li>
+          <li class="burger__item">
+            <a href="#" class="burger__link link link-reset">
+              Одежда для улицы
+            </a>
+          </li>
+          <li class="burger__item">
+            <a href="#" class="burger__link link link-reset">
+              ВЫход
+            </a>
+          </li>
+        </ul>
       </div>
-    </header>
+    </div>
+  </header>
+  <div class="wrapper">
     <main>
       <section class="top-content">
         <div class="container top-content__container">
@@ -544,16 +560,10 @@
 
     </main>
   </div>
-  <div class="modal" id="modal_3">
-    <div class="modal__box">
-      <div class="modal__content">
-      </div>
-    </div>
-  </div>
   <div class="modal" id="modal_1">
     <div class="modal__box">
       <div class="modal__content">
-        <div class="modal__card modal__callback-form">
+        <div class="modal__card">
           <a href="#" class="link-reset modal__close">
             <svg width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path fill-rule="evenodd" clip-rule="evenodd"
@@ -563,12 +573,29 @@
                 fill="black" />
             </svg>
           </a>
-          <h3 class="title modal__title">Модальное окно</h3>
+          <h3 class="title modal__title">Товар "..." в количестве "..." единиц добавлен в корзину</h3>
         </div>
       </div>
     </div>
   </div>
-
+  <div class="modal" id="modal_2">
+    <div class="modal__box">
+      <div class="modal__content">
+        <div class="modal__card">
+          <a href="#" class="link-reset modal__close">
+            <svg width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M0.666641 15.3044L15.3333 0.000153846L16 0.695801L1.33331 16L0.666641 15.3044Z" fill="black" />
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M0.666725 -0.000125032L15.3334 15.3041L14.6667 15.9998L5.76143e-05 0.695522L0.666725 -0.000125032Z"
+                fill="black" />
+            </svg>
+          </a>
+          <h3 class="title modal__title">Товар добавлен в израбнное</h3>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
 
 </html>
