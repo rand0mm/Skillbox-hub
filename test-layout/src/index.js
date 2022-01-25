@@ -5,6 +5,7 @@ import counter from './js/counter';
 import burger from './js/burger';
 import form from './js/form';
 import addBtns from './js/addbtns';
+import scrollHeader from './js/scrollheader';
 
 Swiper.use([EffectFade, Thumbs]);
 
@@ -44,3 +45,4 @@ counter();
 burger();
 form();
 addBtns();
+scrollHeader();
