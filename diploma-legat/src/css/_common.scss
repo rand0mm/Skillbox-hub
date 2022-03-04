@@ -1,0 +1,172 @@
+@import '_mixin.scss';
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local(''),
+      url('../fonts/open-sans-v23-latin_cyrillic-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url('../fonts/open-sans-v23-latin_cyrillic-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: italic;
+  font-weight: 400;
+  src: local(''),
+      url('../fonts/open-sans-v23-latin_cyrillic-italic.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url('../fonts/open-sans-v23-latin_cyrillic-italic.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 600;
+  src: local(''),
+      url('../fonts/open-sans-v23-latin_cyrillic-600.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url('../fonts/open-sans-v23-latin_cyrillic-600.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: local(''),
+      url('../fonts/open-sans-v23-latin_cyrillic-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url('../fonts/open-sans-v23-latin_cyrillic-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+:root {
+  // цвет
+  --color-black: #000;
+  --color-white: #FFF;
+  --color-light-gray-fill: #ECECEC;
+  --color-gray-fill: #CACACA;
+  --color-dark-gray-fill: #666;
+  --color-very-light-fill: #D1A9F0;
+  --color-light-fill: #C283F3;
+  --color-fill: #9D5CD0;
+  --color-dark-fill: #7943A4;
+  --color-light-text: #fff;
+  --color-gray-text: #999;
+  --color-text: #333;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  list-style: none;
+  text-decoration: none;
+}
+html body {
+  font-family: 'Open Sans', sans-serif;
+}
+body {
+  position: relative;
+  min-width: 320px;
+}
+img,
+svg {
+  width: 100%;
+}
+
+h1,h2,h3,h4,p,ul,li {
+  margin: 0;
+}
+div .active {
+  display: block;
+}
+div .deactivate {
+  display: none;
+}
+.container {
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.second-title {
+  font-weight: normal;
+  font-size: 1.75em;
+  line-height: 38px;
+}
+.btn {
+  border-color: transparent;
+  outline: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+.top-wrap {
+  position: relative;
+}
+// отключить скролл
+.disable-scroll {
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+// паттерн для скрытия
+div .visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0, 0, 0, 0);
+  overflow: hidden;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+div .swiper-btn-disabled,
+div .swiper-btn-disabled:hover,
+div .swiper-btn-disabled:focus,
+div .swiper-btn-disabled:active {
+  border-color: transparent;
+  background-color: #B0B0B0;
+  opacity: 0.85;
+  cursor: auto;
+  @include transition;
+}
+
+div .swiper-btn-disabled-light,
+div .swiper-btn-disabled-light:hover,
+div .swiper-btn-disabled-light:focus,
+div .swiper-btn-disabled-light:active {
+  border-color: transparent;
+  background-color: var(--color-light-gray-fill);
+  opacity: 1;
+  cursor: auto;
+  @include transition;
+}
+@media (min-width: 480px) {
+  .container {
+    padding-right: 50px;
+    padding-left: 50px;
+  }
+  .second-title {
+    font-weight: normal;
+    font-size: 3em;
+    line-height: 1.5em;
+  }
+}
+
+@media (min-width: 1025px) {
+  .container {
+    padding-right: 100px;
+    padding-left: 100px;
+  }
+}
+@media (min-width: 1480px) {
+  .container {
+    padding-right: 160px;
+    padding-left: 160px;
+  }
+
+}

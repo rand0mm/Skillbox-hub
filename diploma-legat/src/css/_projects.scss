@@ -1,0 +1,181 @@
+@import '_mixin.scss';
+
+.progects {
+  padding-top: 37px;
+  padding-bottom: 49px;
+  color: var(--color-text);
+  &__title {
+    margin-bottom: 12px;
+  }
+  &__text {
+    margin-bottom: 8px;
+    font-size: 1em;
+    line-height: 2em;
+  }
+  &__link {
+    border-bottom: 1px solid transparent;
+    color: var(--color-fill);
+    @include transition;
+  }
+  &__link:focus {
+    color: var(--color-light-text);
+    background-color: var(--color-fill);
+  }
+  &__link:active {
+    border-color: var(--color-text);
+    color: var(--color-text);
+    background-color: transparent;
+  }
+  &__title-third {
+    margin-bottom: 9px;
+    font-weight: 600;
+    font-size: 1.125em;
+    line-height: 2em;
+  }
+  &__swiper-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 65px;
+  }
+  &__swiper {
+    margin: 0 10px;
+    width: calc(195/290 * 100%);
+    height: 65px;
+    overflow: hidden;
+  }
+  &__slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 13px 27px;
+    border: 1px solid #CACACA;
+    min-height: 65px;
+    @include transition;
+    cursor: pointer;
+  }
+  &__img {
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    max-height: 100%;
+    object-fit: contain;
+    opacity: 0.6;
+    filter: grayscale(100%);
+    @include transition;
+  }
+  &__slide:focus {
+    border-color: var(--color-fill);
+  }
+  &__slide:active {
+    border-color: var(--color-fill);
+  }
+  &__slide:active img {
+    opacity: 1;
+    filter: none;
+  }
+  &__btn {
+    position: relative;
+    margin-top: auto;
+    margin-bottom: auto;
+    border: 2px solid transparent;
+    border-radius: 100px;
+    width: 30px;
+    height: 30px;
+    background-color: var(--color-light-gray-fill);
+    @include transition;
+  }
+  &__btn_next::after,
+  &__btn_prev::after {
+    content: '';
+    position: absolute;
+    top: 27%;
+    left: 35%;
+    width: 8px;
+    height: 12px;
+    @include backgroundCenter;
+  }
+  &__btn_next::after {
+    left: 39%;
+  }
+  &__btn_prev::after {
+    background-image: url('../img/arrow-left.svg');
+  }
+  &__btn_next::after {
+    background-image: url('../img/arrow-right.svg');
+  }
+  &__btn:focus {
+    border-color: var(--color-fill);
+  }
+  &__btn:active{
+    border-color: var(--color-fill);
+    background-color: var(--color-very-light-fill);
+  }
+}
+.swiper-btn-disabled-light.progects__btn_next::after,
+.swiper-btn-disabled-light.progects__btn_prev::after {
+  opacity: 0.3;
+}
+@media (min-width: 480px) {
+  .progects {
+    padding-top: 64px;
+    padding-bottom: 80px;
+    &__text {
+      margin-bottom: 20px;
+    }
+    &__title-third {
+      margin-bottom: 21px;
+      font-size: 1.5em;
+    }
+    &__swiper {
+      width: calc(562/668 * 100%);
+      height: 106px;
+    }
+  }
+}
+
+@media (min-width: 769px) {
+  .progects {
+    &__text {
+      margin-bottom: 12px;
+    }
+    &__title-third {
+      margin-bottom: 15px;
+    }
+    &__swiper {
+      width: calc(818/924 * 100%);
+      height: 128px;
+    }
+  }
+}
+
+@media (min-width: 1025px) {
+  .progects {
+    &__link:hover {
+      border-color: var(--color-light-fill);
+      color: var(--color-light-fill);
+      background-color: transparent;
+    }
+    &__slide:hover img {
+      opacity: 1;
+      filter: none;
+    }
+    &__btn:hover {
+      background-color: var(--color-very-light-fill);
+    }
+  }
+}
+
+@media (min-width: 1480px) {
+  .progects {
+    padding-top: 57px;
+    &__text {
+      width: calc(1080/1600 * 100%);
+    }
+    &__swiper {
+      width: calc(1450/1600 * 100%);
+      height: 150px;
+    }
+  }
+}
+

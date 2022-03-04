@@ -1,0 +1,329 @@
+@import '_mixin.scss';
+
+.events {
+  &__title {
+    margin-bottom: 12px;
+  }
+  &__swiper-box {
+    position: relative;
+  }
+  &__swiper .events__card {
+    height: auto;
+  }
+  &__swiper .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet,
+  &__swiper .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+    margin: 10px 7.5px 0;
+  }
+  &__swiper .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+  }
+  &__swiper  .swiper-pagination-bullet-active {
+    background-color: #666666;
+  }
+  &__btn-next,
+  &__btn-prev {
+    position: absolute;
+    top: 45%;
+    right: -25px;
+    z-index: 100;
+    display: none;
+    border: 1px solid transparent;
+    border-radius: 100px;
+    width: 50px;
+    height: 50px;
+    background-color: var(--color-light-gray-fill);
+    @include transition;
+  }
+  &__btn-prev {
+    right: auto;
+    left: -25px;
+  }
+  &__btn-next::after,
+  &__btn-prev::after {
+    content: '';
+    position: absolute;
+    top: 30%;
+    left: 24%;
+    width: 29px;
+    height: 19px;
+    background-image: url('../img/arrow-right.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    @include transition;
+  }
+  &__btn-prev::after {
+    left: 18%;
+    transform: scale( -1, 1);
+  }
+
+  &__btn-next:focus {
+    background-color: var(--color-light-fill);
+  }
+  &__btn-next:active {
+    background-color: var(--color-light-fill);
+    border-color: var(--color-fill);
+  }
+  &__wrapper {
+    flex: 1 1 auto;
+    margin-bottom: 20px;
+  }
+  &__card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 218px 18px 50px 22px;
+    border: 1px solid #CACACA;
+    min-height: 683px;
+    background-repeat: no-repeat;
+    background-size: 0;
+    &_bg-one {
+      background-image: url('../img/events-one-320.jpg');
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/events-one-320@2x.jpg");
+      }
+    }
+    &_bg-two {
+      background-image: url('../img/events-two-320.jpg');
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/events-two-320@2x.jpg");
+      }
+    }
+    &_bg-three {
+      background-image: url('../img/events-three-320.jpg');
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/events-three-320@2x.jpg");
+      }
+    }
+    &_bg-four {
+      background-image: url('../img/events-four-320.jpg');
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/events-four-320@2x.jpg");
+      }
+    }
+    &_bg-five {
+      background-image: url('../img/events-five-320.jpg');
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/events-five-320@2x.jpg");
+      }
+    }
+  }
+  &__card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 200px;
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: inherit;
+  }
+  &__info {
+    margin-left: auto;
+    margin-bottom: 11px;
+    text-align: right;
+    font-size: 0.75em;
+    line-height: 1.2em;
+    color: var(--color-gray-text);
+  }
+  &__card-title {
+    margin-bottom: 5px;
+    font-weight: 600;
+    font-size: 1.5em;
+    line-height: 1.4em;
+  }
+  &__text {
+    margin-bottom: auto;
+    font-size: 1em;
+    line-height: 2em;
+  }
+  &__link {
+    position: relative;
+    margin-right: auto;
+    padding: 4px 6px;
+    border-bottom: 1px solid var(--color-fill);
+    color: var(--color-fill);
+    @include transition;
+  }
+  &__link::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: -2px;
+    right: -6px;
+    bottom: -4px;
+    left: -6px;
+    background-color: transparent;
+    @include transition;
+  }
+  &__link:focus {
+    color: var(--color-light-text);
+    border-color: var(--color-light-text);
+  }
+  &__link:focus::after {
+    background-color: var(--color-dark-fill);
+  }
+  &__link:hover {
+    color: var(--color-light-fill);
+    border-color: var(--color-light-fill);
+  }
+  &__link:active {
+    color: var(--color-text);
+    border-color: var(--color-text);
+  }
+  &__link:hover,
+  &__link:active,
+  &__link:hover::after,
+  &__link:active::after {
+    background-color: transparent;
+  }
+}
+.events .events__pagination {
+  position: relative;
+}
+
+@media (min-width: 480px) {
+  .events {
+    &__swiper .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+      margin: 20px 8px 0;
+    }
+    &__card {
+      padding: 215px 18px 50px 35px;
+      min-height: 583px;
+    }
+    &__info {
+    margin-bottom: 5px;
+    }
+    &__card-title {
+      margin-right: 10px;
+    }
+    &__text {
+      margin-right: 10px;
+    }
+    &__link {
+      padding: 4px 0px;
+    }
+  }
+}
+@media (min-width: 750px) {
+  .events {
+    &__card {
+      min-height: 683px;
+    }
+  }
+}
+
+@media (min-width: 769px) {
+  .events {
+    &__card {
+      &_bg-one {
+        background-image: url('../img/events-one-1024.jpg');
+        @media (min-resolution: 2dppx) {
+          background-image: url("../img/events-one-1024@2x.jpg");
+        }
+      }
+      &_bg-two {
+        background-image: url('../img/events-two-1024.jpg');
+        @media (min-resolution: 2dppx) {
+          background-image: url("../img/events-two-1024@2x.jpg");
+        }
+      }
+      &_bg-three {
+        background-image: url('../img/events-three-1024.jpg');
+        @media (min-resolution: 2dppx) {
+          background-image: url("../img/events-three-1024@2x.jpg");
+        }
+      }
+      &_bg-four {
+        background-image: url('../img/events-four-1024.jpg');
+        @media (min-resolution: 2dppx) {
+          background-image: url("../img/events-four-1024@2x.jpg");
+        }
+      }
+      &_bg-five {
+        background-image: url('../img/events-five-1024.jpg');
+        @media (min-resolution: 2dppx) {
+          background-image: url("../img/events-five-1024@2x.jpg");
+        }
+      }
+    }
+  }
+}
+@media (min-width: 1025px) {
+  .events {
+    &__btn-next:hover {
+      background-color: var(--color-light-fill);
+    }
+    &__link:hover {
+      color: var(--color-light-fill);
+      border-color: var(--color-light-fill);
+    }
+    &__link:hover,
+    &__link:hover::after {
+      background-color: transparent;
+    }
+  }
+}
+
+@media (min-width: 1480px) {
+  .events {
+    &__card {
+      padding: 314px 60px 40px 49px;
+      min-height: 700px;
+      &_bg-one {
+        background-image: url('../img/events-one-1920.jpg');
+        @media (min-resolution: 2dppx) {
+          background-image: url("../img/events-one-1920@2x.jpg");
+        }
+      }
+      &_bg-two {
+        background-image: url('../img/events-two-1920.jpg');
+        @media (min-resolution: 2dppx) {
+          background-image: url("../img/events-two-1920@2x.jpg");
+        }
+      }
+      &_bg-three {
+        background-image: url('../img/events-three-1920.jpg');
+        @media (min-resolution: 2dppx) {
+          background-image: url("../img/events-three-1920@2x.jpg");
+        }
+      }
+      &_bg-four {
+        background-image: url('../img/events-four-1920.jpg');
+        @media (min-resolution: 2dppx) {
+          background-image: url("../img/events-four-1920@2x.jpg");
+        }
+      }
+      &_bg-five {
+        background-image: url('../img/events-five-1920.jpg');
+        @media (min-resolution: 2dppx) {
+          background-image: url("../img/events-five-1920@2x.jpg");
+        }
+      }
+    }
+    &__card::before {
+      height: 300px;
+    }
+    &__info {
+      margin-right: auto;
+      margin-bottom: 16px;
+      margin-left: 0;
+      text-align: left;
+    }
+    &__card-title {
+      margin-bottom: 1px;
+    }
+    &__btn-next,
+    &__btn-prev {
+      display: block;
+    }
+    &__pagination {
+      display: none;
+    }
+  }
+}

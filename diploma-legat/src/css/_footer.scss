@@ -1,0 +1,91 @@
+@import '_mixin.scss';
+
+.footer {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: var(--color-black);
+  &__box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 17px;
+    width: 210px;
+  }
+  &__svg {
+    width: 50px;
+    height: 50px;
+  }
+  &__svg path {
+    @include transition;
+  }
+  &__link:focus path {
+    fill: var(--color-white);
+  }
+  &__link:active path {
+    fill: var(--color-fill)
+  }
+  &__logo {
+    width: 97px;
+    height: 22px;
+    background-image: url('../img/logo.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+}
+
+@media (min-width: 480px) {
+  .footer {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    &__box {
+      flex-direction: row-reverse;
+    }
+    &__list {
+      margin-bottom: 0;
+      width: auto;
+    }
+    &__item:not(:last-child) {
+      margin-right: 15px;
+    }
+    &__logo {
+      width: 173px;
+      height: 40px;
+    }
+  }
+}
+
+@media (min-width: 750px) {
+  .footer {
+    &__svg {
+      width: 60px;
+      height: 60px;
+    }
+    &__item:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+}
+
+@media (min-width: 1025px) {
+  .footer {
+    padding-top: 48px;
+    padding-bottom: 48px;
+    &__svg {
+      width: 45px;
+      height: 45px;
+    }
+    &__item:not(:last-child) {
+      margin-right: 20px;
+    }
+    &__link:hover path {
+      fill: var(--color-white);
+    }
+  }
+}
+
