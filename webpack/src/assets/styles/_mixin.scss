@@ -1,0 +1,11 @@
+@mixin transition {
+  transition-property: border, outline, color, background-color, transform, fill, stroke, opacity, filter;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+}
+
+@mixin  backgroundCenter {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}

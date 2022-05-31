@@ -1,0 +1,75 @@
+@import '_mixin.scss';
+.btn {
+  position: relative;
+  border-color: transparent;
+  // border: 2px solid var(--color-fill) !important;
+  border-radius: var(--radius-btn);
+  outline: none;
+  background-color: transparent;
+  cursor: pointer;
+  @include transition;
+  &_nav {
+    position: relative;
+    z-index: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid var(--color-border-btn);
+    border-radius: 100px;
+    width: 30px;
+    height: 30px;
+    opacity: var(--opacity-btn-nav);
+    background-color: var(--color-background-btn-alternate);
+    @include transition;
+  }
+  &__nav-icon {
+    @include backgroundCenter;
+    &_vert-up,
+    &_vert-down {
+      width: 52%;
+      height: 28%;
+      background-image: url('assets/images/arrow-vert.svg');
+    }
+    &_vert-up {
+      transform: scale(1, -1);
+    }
+    &_horiz,
+    &_horiz-right {
+      width: 26%;
+      height: 37%;
+      background-image: url('assets/images/arrow-horiz.svg');
+    }
+    &_horiz-right {
+      background-image: url('assets/images/arrow-horiz.svg');
+      transform: scale(-1, 1);
+    }
+    &_reminder {
+      background-color: var();
+    }
+  }
+
+}
+div .btn_disabled,
+div .btn_disabled:hover,
+div .btn_disabled:focus,
+div .btn_disabled:active {
+  border-color: transparent;
+  background-color: var(--color-background-btn-alternate);
+  opacity: 0.4;
+  cursor: auto;
+}
+div .btn_disabled-full-opacity,
+div .btn_disabled-full-opacity:hover,
+div .btn_disabled-full-opacity:focus,
+div .btn_disabled-full-opacity:active {
+  opacity: 0;
+}
+div .btn_disabled_alternate,
+div .btn_disabled_alternate:hover,
+div .btn_disabled_alternate:focus,
+div .btn_disabled_alternate:active {
+  border-color: transparent;
+  background-color: var(--color-background-btn);
+  opacity: 1;
+  cursor: auto;
+}
