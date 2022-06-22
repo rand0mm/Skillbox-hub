@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.min.js"></script>
+    <script defer src="scrypt.js"></script>
+</head>
+<body>
+  <div id="app">
+    <h1>
+      {{title}}
+    </h1>
+    <div>
+        <div v-if="count() == 0">Вы великолепны!</div>
+        <div v-else-if="count() == 1">Остался последний рывок</div>
+        <div v-else>
+          {{subtitle}} <span class="counter">{{count()}}</span>
+        </div>
+      </div>
+      <div class="list">
+        <div class="item" :class="{done: task.done}" v-for="task in tasks">
+          <input type="checkbox" v-model="task.done">
+          {{ task.text }}
+        </div>
+      </div>
+      <div class="form">
+        <input v-model="message">
+        <button type="button" @click="addTask">Добавить</button>
+      </div>
+      <transition name = "fadeTest">
+        <div v-show="count() == 0">Лень искать картинку</div>
+      </transition>
+  </div>
+</body>
+</html>

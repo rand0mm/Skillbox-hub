@@ -1,0 +1,26 @@
+
+.intem {
+    margin: 20px 0;
+}
+.item {
+    margin: 10px 0;
+}
+
+.done {
+  text-decoration: line-through;
+}
+
+.form {
+    margin: 20px 0;
+}
+
+.count {
+  text-align: center;
+}
+
+.fadeTest-enter-active, .fadeTest-leave-active {
+  transition: opacity .5s;
+}
+.fadeTest-enter, .fadeTest-leave-to /* .fade-leave-active до версии 2.1.8 */ {
+  opacity: 0;
+}

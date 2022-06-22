@@ -23,6 +23,12 @@
                {{ task }}
             </div>
         </div>
+        <hr>
+          <div class="item" v-for="task in tasksTwo">
+                <input type="checkbox" >
+               {{ task }}
+            </div>
+        </div>
         <div class="form">
             <input :placeholder="message">
             <button type="button">Добавить</button>
