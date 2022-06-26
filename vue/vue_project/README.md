@@ -1,5 +1,5 @@
 # vue_project
-
+Учебный проект по Vue(2v)
 ## Project setup
 ```
 npm install

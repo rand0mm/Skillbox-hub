@@ -27,12 +27,12 @@
           {{ task.text }}
         </div>
       </div>
-      <div class="form">
+      <form class="form" @submit="addTask" @submit.prevent="onSubmit">
         <input v-model="message">
-        <button type="button" @click="addTask">Добавить</button>
-      </div>
+        <button type="button" @click="addTask" @submit="addTask">Добавить</button>
+      </form>
       <transition name = "fadeTest">
-        <div v-show="count() == 0">Лень искать картинку</div>
+        <img class="img" v-show="count() == 0" src="https://fsd.multiurok.ru/html/2017/04/17/s_58f459dacaf65/img44.jpg" alt="тестовое изображение">
       </transition>
   </div>
 </body>

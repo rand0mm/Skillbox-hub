@@ -22,6 +22,6 @@ var app = new Vue({
     },
     count() {
       return this.tasks.filter(task => !task.done).length;
-    }
+    },
   }
 })
