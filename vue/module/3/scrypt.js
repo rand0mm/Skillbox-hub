@@ -1,21 +1,26 @@
-Vue.component('like-button', {
+Vue.component('like-dislike-buttons', {
   data: function() {
     return {
-      counter: 0
+      counterLike: 0,
+      counterDisLike: 0
     }
   },
-  template: '<button type="button" @click="counter++">&#9829; {{counter}}</button> '
-})
-Vue.component('dislike-button', {
-  data: function() {
-    return {
-      counter: 0
-    }
-  },
-  template: '<button type="button" @click="counter++">&#128078; {{counter}}</button> '
+  template: '<span><button type="button" @click="counterLike++">&#9829; {{counterLike}}</button><button type="button" @click="counterDisLike++">&#128078; {{counterDisLike}}</button></span>'
 })
 
-
+Vue.component('tasks-list', {
+  props: ['tasks', 'title'],
+  template: `
+  <div class="list">
+    <h2 v-if="title">{{ title }}</h2>
+    <div class="item" :class="{done: task.done}" v-for="task in tasks" :key="task.text">
+      <input type="checkbox" v-model="task.done">
+      {{ task.text }}
+      <like-button></like-button>
+      <dislike-button></dislike-button>
+    </div>
+  </div>`
+})
 
 var app = new Vue({
   el: '#app',
@@ -41,6 +46,12 @@ var app = new Vue({
     },
     count() {
       return this.tasks.filter(task => !task.done).length;
+    },
+    completedTasks() {
+      return this.tasks.filter(task => task.done)
+    },
+    uncompletedTasks() {
+      return this.tasks.filter(task => !task.done)
     },
   }
 })
