@@ -6,6 +6,15 @@ Vue.component('like-button', {
   },
   template: '<button type="button" @click="counter++">&#9829; {{counter}}</button> '
 })
+Vue.component('dislike-button', {
+  data: function() {
+    return {
+      counter: 0
+    }
+  },
+  template: '<button type="button" @click="counter++">&#128078; {{counter}}</button> '
+})
+
 
 
 var app = new Vue({
