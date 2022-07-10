@@ -1,7 +1,7 @@
 <template>
   <section class="catalog">
     <ul class="catalog__list">
-      <li class="catalog__item" v-for="{product, index} in products" :key="index">
+      <li class="catalog__item" v-for="(product, index) in products" :key="index">
         <a class="catalog__pic" href="#">
           <img :src="product.img" :alt="product.title">
         </a>
@@ -16,7 +16,7 @@
           {{product.price}}₽
         </span>
 
-        <ul class="colors colors--black">
+        <!-- <ul class="colors colors--black">
           <li class="colors__item">
             <label class="colors__label">
               <input class="colors__radio sr-only"
@@ -30,7 +30,10 @@
           </li>
           <li class="colors__item">
             <label class="colors__label">
-              <input class="colors__radio sr-only" type="radio" name="color-1" value="#8BE000">
+              <input class="colors__radio sr-only"
+               type="radio"
+               name="color-1"
+              value="#8BE000">
               <span class="colors__value" style="background-color: #8BE000;">
               </span>
             </label>
@@ -42,11 +45,11 @@
               </span>
             </label>
           </li>
-        </ul>
+        </ul> -->
       </li>
     </ul>
 
-    <ul class="catalog__pagination pagination">
+    <!-- <ul class="catalog__pagination pagination">
       <li class="pagination__item">
         <a class="pagination__link pagination__link--arrow pagination__link--disabled" aria-label="Предыдущая страница">
           <svg width="8" height="14" fill="currentColor">
@@ -91,7 +94,7 @@
           </svg>
         </a>
       </li>
-    </ul>
+    </ul> -->
   </section>
 </template>
 
