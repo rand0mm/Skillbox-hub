@@ -1,7 +1,15 @@
 Vue.component('like-dislike-buttons', {
-  prod: ['counterLike','counterDisLike']
-  template: '<span><button type="button" @click="counterLike++">&#9829; {{counterLike}}</button><button type="button" @click="counterDisLike++">&#128078; {{counterDisLike}}</button></span>'
-})
+  props: ['counterlike','counterdislike'],
+  template: `<span><button type="button" @click="incrementLike">&#9829; {{counterlike}}</button><button type="button" @click="incrementDisLike">&#128078; {{counterdislike}}</button></span>`,
+  methods: {
+    increment(){
+      this.$emit('update:counterlike', this.counterlike + 1);
+    },
+    incrementDisLike(){
+      this.$emit('update:counterdislike', this.counterdislike + 1);
+    },
+  }
+});
 
 Vue.component('tasks-list', {
   props: ['tasks', 'title'],
@@ -11,11 +19,10 @@ Vue.component('tasks-list', {
     <div class="item" :class="{done: task.done}" v-for="task in tasks" :key="task.text">
       <input type="checkbox" v-model="task.done">
       {{ task.text }}
-      <like-button></like-button>
-      <dislike-button></dislike-button>
+      <like-dislike-buttons :counterlike="task.likes" :counterdislike="task.dislikes"></like-dislike-buttons>
     </div>
   </div>`
-})
+});
 
 var app = new Vue({
   el: '#app',
@@ -24,13 +31,13 @@ var app = new Vue({
     subtitle: 'Осталось сделать задач',
     message: 'Привет, Vue!',
     likesHeader: 2,
-    likesList: 3,
+    likesForm: 3,
     likesDisHeader: 1,
-    likesDisList: 0,
+    likesDisForm: 0,
     tasks: [
-      {text: 'Развернуть окружение в Codepen', done: true, likes: 0},
-      {text: 'Пройти курс по Vue', done: false, likes: 0},
-      {text: 'Сделать интернет-магазин на Vue', done: false, likes: 0},
+      {text: 'Развернуть окружение в Codepen', done: true, likes: 2, dislikes: 3},
+      {text: 'Пройти курс по Vue', done: false, likes: 1, dislikes: 3},
+      {text: 'Сделать интернет-магазин на Vue', done: false, likes: 4, dislikes: 2},
     ],
     tasksTwo: [
       'Использовать знания в реальных проектах',
@@ -49,16 +56,16 @@ var app = new Vue({
       return this.tasks.filter(task => !task.done).length;
     },
     completedTasks() {
-      return this.tasks.filter(task => task.done)
+      return this.tasks.filter(task => task.done);
     },
     uncompletedTasks() {
-      return this.tasks.filter(task => !task.done)
+      return this.tasks.filter(task => !task.done);
     },
     countLikes() {
-      return this.likesHeader + this.likesList + this.tasks.reduce((value, task) => value + task.likes, 0);
+      return this.likesHeader + this.likesForm + this.tasks.reduce((value, task) => value + task.likes, 0);
     },
     countDisLikes() {
-      return this.likesDisHeader + this.likesDisList + this.tasks.reduce((value, task) => value + task.likesDis, 0);
+      return this.likesDisHeader + this.likesDisForm + this.tasks.reduce((value, task) => value + task.likesDis, 0);
     },
   }
-})
+});

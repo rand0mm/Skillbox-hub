@@ -6,30 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.js"></script>
     <script defer src="scrypt.js"></script>
 </head>
 <body>
   <div id="app">
     <h1>
       {{title}}
-      <like-dislike-buttons :counterLike="headerLike" :counterDisLike="headerDisLike"></like-dislike-buttons>></like-dislike-buttons>
+      <like-dislike-buttons  :counterlike="likesHeader" :counterdislike="likesDisHeader" @counter-change-like="likesHeader=$event" @counter-change-dislike="likesDisHeader=$event"></like-dislike-buttons>
     </h1>
-    <h3>Колличество лайков = {{countLikes}}</h3>
-    <h3>Колличество дизлайков = {{countDisLikes}}</h3>
+    <h3>Колличество лайков = {{likesHeader}}</h3>
+    <h3>Колличество дизлайков = {{likesDisHeader}}</h3>
     <div>
         <div v-if="count == 0">Вы великолепны!</div>
         <div v-else-if="count == 1">Остался последний рывок</div>
         <div v-else>
           {{subtitle}} <span class="counter">{{count}}</span>
         </div>
-        <like-dislike-buttons :counterLike="headerLike" :counterDisLike="headerDisLike"></like-dislike-buttons>
       </div>
       <tasks-list v-show="uncompletedTasks.length != 0" :tasks="uncompletedTasks" ></tasks-list>
       <form class="form" @submit="addTask" @submit.prevent="onSubmit">
         <input v-model="message">
         <button type="button" @click="addTask" @submit="addTask">Добавить</button>
-        <like-dislike-buttons></like-dislike-buttons>
+        <like-dislike-buttons :counterlike="likesForm" :counterdislike="likesDisForm"></like-dislike-buttons>
+
       </form>
       <tasks-list v-show="completedTasks.length != 0" :tasks="completedTasks" :title="'Завершенные задачи'"></tasks-list>
       <transition name = "fadeTest">
