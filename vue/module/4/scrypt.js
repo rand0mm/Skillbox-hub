@@ -1,13 +1,13 @@
 Vue.component('like-button', {
   model: {
     prop: 'counter',
-    event: 'counter-change'
+    event: 'counter',
   },
   props: ['counter'],
   template: `<button type="button" @click="increment">&#9829; {{counter}}</button>`,
   methods: {
     increment(){
-      this.$emit('counter-change', this.counter + 1);
+      this.$emit('counter', this.counter + 1);
     },
   }
 });
@@ -20,7 +20,7 @@ Vue.component('tasks-list', {
     <div class="item" :class="{done: task.done}" v-for="task in tasks" :key="task.text">
       <input type="checkbox" v-model="task.done">
       {{ task.text }}
-      <like-button :counter.sync="task.likes"></like-button>
+      <like-button v-model="task.likes"></like-button>
     </div>
   </div>`
 });

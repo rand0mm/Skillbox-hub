@@ -15,7 +15,7 @@
       {{title}}
       <like-button  v-model="likesHeader"></like-button>
     </h1>
-    <h3>Колличество лайков = {{likesHeader}}</h3>
+    <h3>Колличество лайков = {{countLikes}}</h3>
     <div>
         <div v-if="count == 0">Вы великолепны!</div>
         <div v-else-if="count == 1">Остался последний рывок</div>
@@ -27,7 +27,8 @@
       <form class="form" @submit="addTask" @submit.prevent="onSubmit">
         <input v-model="message">
         <button type="button" @click="addTask" @submit="addTask">Добавить</button>
-        <like-button :v-model="likesForm"></like-button>
+        <!-- <like-button :counter.sync="likesForm"></like-button> -->
+        <like-button  v-model="likesForm"></like-button>
 
       </form>
       <tasks-list v-show="completedTasks.length != 0" :tasks="completedTasks" :title="'Завершенные задачи'"></tasks-list>
